@@ -16,7 +16,7 @@ const cors = require('cors'); //required as API client on 3000 and API server on
 const { expressjwt: jwt } = require('express-jwt');
 const jwks = require('jwks-rsa');
 const axios = require('axios');
-
+const { auth } = require('express-oauth2-jwt-bearer');
 
 const app = express(); 
 
@@ -50,9 +50,17 @@ const verifyJwt = jwt({
 	audience: 'this is a unique identifier',
 	issuer: 'https://dev-5ytq8xlvrdmg2d03.us.auth0.com/',
 	algorithms: ['RS256'],
-})
+}).unless({ path: ['/'] });
+
+const jwtCheck = auth({ 
+ audience: 'this is a unique identifier', 
+ issuerBaseURL: 'https://dev-5ytq8xlvrdmg2d03.us.auth0.com/', 
+ tokenSigningAlg: 'RS256' 
+});
   
+//app.use(jwtCheck);
 //app.use(verifyJwt);
+
 
 app.get('/', (req, res) => { 
 
@@ -60,12 +68,45 @@ app.get('/', (req, res) => {
 
 }); 
 
-app.get('/protected', (req, res) => { 
-
-  res.send('Hello from protected route'); 
+//app.get('/protected', jwtCheck, (req, res) => { 
+//app.get('/protected', verifyJwt, (req, res) => { 
+app.get('/protected', verifyJwt, async (req, res) => {
+//  res.send('Hello from protected route'); 
+  //res.send(req.user);
+  try {
+	const accessToken = req.headers.authorization.split(' ')[1];
+	const response = await axios.get('https://dev-5ytq8xlvrdmg2d03.us.auth0.com/userinfo', {
+		headers: {
+			authorization: `Bearer ${accessToken}`
+		}	
+	});
+	const userinfo = response.data
+	console.log(userinfo);
+	res.send(userinfo);  
+  } catch (error) {
+		res.send(error.message)
+  }
 
 }); 
-  
+
+app.get('/topsecret', verifyJwt, (req, res) => {
+  res.send('Hello from top secret.'); 
+}); 
+
+//app.get()
+
+app.use((req, res, next) => {
+	const error = new Error('Not found');
+	error.status = 404;
+	next(error);
+});
+
+app.use((error, req, res, next) => {
+//  res.status().send()	
+	const status = error.status || 500;
+	const message = error.message || 'Internal server error';
+	req.status(status).send(message);
+});
 
 app.listen(port,() => { 
 

@@ -15,7 +15,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "dev": "concurrently 'npm start' 'cd api && npm start'",
+    "client": "cd src && npm start",
+	"server": "cd api && node server.js",
+	"dev": "concurrently \"npm run client\" \"npm run server\"",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

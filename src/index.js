@@ -11,9 +11,11 @@ root.render(
   	<Auth0Provider
 		domain='dev-5ytq8xlvrdmg2d03.us.auth0.com'
 		clientId='apombnwMiJWNICbzBmar3rxMt48XOwYr'
-		redirectUri={window.location.origin}
-		audience="this is a unique identifier"
-		scope="offline_access"
+		authorizationParams={{
+			redirect_Uri: window.location.origin,
+			audience: "this is a unique identifier",
+			scope: "openid profile email offline_access"
+		}}
 	>
 	    <App />
 	</Auth0Provider>
