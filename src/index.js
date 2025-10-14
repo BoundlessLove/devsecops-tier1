@@ -14,7 +14,7 @@ root.render(
 		authorizationParams={{
 			redirect_Uri: window.location.origin,
 			audience: "this is a unique identifier",
-			scope: "openid profile email offline_access"
+			scope: "offline_access"
 		}}
 	>
 	    <App />

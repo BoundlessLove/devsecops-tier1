@@ -1,4 +1,4 @@
-
+import React, { useState } from 'react'; 
 import axios from 'axios';
 import './App.css';
 import { useAuth0 } from '@auth0/auth0-react';
@@ -12,15 +12,69 @@ function App() {
 		isAuthenticated,
 		getAccessTokenSilently, //This Access token is a JWT, that will be verified.
 	} = useAuth0();
+
+	const [output, setOutput] = useState(null);  //Store API response 
+//	const { getAccessTokenSilently() } = useAuth0();  
+	const [error, setError] = useState(null);     // Track errors 
+	const [userName, setUserName] = useState('');
+	
+/*	const fetchData = (endpoint) => { 
+
+	  setLoading(true); 
+
+	  setError(null); 
+
+	  axios.get(endpoint) // Replace with your API endpoint 
+
+	    .then(response => { 
+
+	      setData(response.data); 
+
+	      setLoading(false); 
+
+	    }) 
+
+	    .catch(err => { 
+
+	      setError(err.message); 
+
+	      setLoading(false); 
+
+	    }); 
+
+	}; 
+
+
+
+	return ( 
+
+	  <div style={{ padding: '20px' }}> 
+
+	    <h1>API Response Viewer</h1> 
+
+	    <button onClick={fetchData}>Fetch API Data</button> 
+
+	    {loading && <p>Loading...</p>} 
+
+	    {error && <p style={{ color: 'red' }}>Error: {error}</p>} 
+
+	    {data && <pre>{JSON.stringify(data, null, 2)}</pre>} 
+
+	  </div> 
+
+	); */
 	
 	function callApi(){
-		axios.get("http://localhost:4000/").then(response => console.log(response.data))
-			.catch(error => console.log(error.message))		
+		axios.get("http://localhost:4000/")
+		 .then(response => setOutput(response.data), setError(null))
+			.catch(error => setOutput(null), setError(error?.message || "Unknown error occurred."))
+//			.then(response => console.log(response.data))
+//			.catch(error => console.log(error.message))
 	}
 	
 	async function callTopSecretApi(){
 		//const token = getToken();
-		const token = await getAccessTokenSilently();
+		//const token = await getAccessTokenSilently();
 		//console.log(token)
 		/*try { 
 			const token = await getAccessTokenSilently(); 
@@ -31,6 +85,11 @@ function App() {
 		} */
 
 // P30	
+		if (!isAuthenticated){
+			setOutput(null);
+			setError("User not authenticated yet.");
+			return;
+		}
 		try{
 			const token = await getAccessTokenSilently();
 			const response = await axios.get("http://localhost:4000/topsecret", {
@@ -38,76 +97,98 @@ function App() {
 					authorization: `Bearer ${token}`,
 				},
 			});
-			console.log(response.data);
-			console.log(token);
+			//if (response.data) 
+				//setOutput(response.data);
+				//setOutput(token);
+			
+			if (response.data){
+				setOutput(response.data);			
+				//setOutput(token);
+			}else{
+				setOutput('You are missing permissions to see JWT token');
+			}
+			setError(null);
 		}catch (error) {
-			console.log(error.message);
+			setOutput(null);
+			if (error.response && (error.response.status === 404 || error.response.status === 403)) {
+				setError(error.response.data.message); //"User Not Found" or "Missing required permisisons"
+			} else {
+				setError(error?.message || "Unknown error occurred.");
+			}
 		}
 	}		
 	
 	
-	async function getToken() { 
-		try { 
-			const response = await fetch('https://dev-5ytq8xlvrdmg2d03.us.auth0.com/oauth/token', 
-			{ 
-				method: 'POST', 
-				headers: { 'content-type': 'application/json' }, 
-/*				body: JSON.stringify({ 
-					client_id: 'xYrBzk8lSAJIZrltRIcxTkTVZ5V2MBq8', 
-					client_secret: 'RVYaN9uvT0afSb_Z3ALPtosJ-viONywmgsz7dDeo8_71MBay6rreZc_uc8f3bDjN', 
-					audience: 'https://your-api-identifier', 
-					grant_type: 'client_credentials' 
-				}), */
-				body: JSON.stringify({ 
-					client_id: 'apombnwMiJWNICbzBmar3rxMt48XOwYr', 
-					client_secret: 'DCvTtzwbnqAyfPM8qYWl3kZc8a3A8pdDTjs8bYoIfRi4nUz63pAiPsx7141RX6lu', 
-					audience: 'this is a unique identifier', 
-					grant_type: 'client_credentials' 
-				}),
-			}); 
-			const text = await response.text(); // Read raw response 
-			console.log('Raw response:', text); 
-	 
-			const data = JSON.parse(text); // Try parsing only if it's valid 
-			console.log('Parsed token:', data); 
-	 
-
-		} catch (error) { 
-			console.error('Error fetching token:', error); 
-		} 
-	} 
-	
 	async function callProtectedApi(){
-		//const token = getToken();
-		const token = await getAccessTokenSilently();
-		//console.log(token)
-		/*try { 
-			const token = await getAccessTokenSilently(); 
-			console.log("Access Token:", token); 
-			console.log("Decoded:", JSON.parse(atob(token.split('.')[1]))); 
-		} catch (error) { 
-			console.error("Token error:", error.message); 
-		} */
 
-// P30	
+		if (!isAuthenticated){
+			setOutput(null);
+			setError("User not authenticated yet.");
+			return;
+		}
 		try{
+			//const token = await getAccessTokenSilently();
 			const token = await getAccessTokenSilently();
 			const response = await axios.get("http://localhost:4000/protected", {
 				headers: {
 					authorization: `Bearer ${token}`,
 				},
 			});
-			console.log(response.data);
+			//console.log(response.data);
 			console.log(token);
+			//setOutput(response.data);
+			setError(null);
 		}catch (error) {
-			console.log(error.message);
+			setOutput(null);
+			if (error.response && (error.response.status === 403)) {
+				setError(error.response.data.message); //"User Not Found" or "Missing required permisisons"
+			} else {
+				setError(error?.message || "Unknown error occurred.");
+				//console.log(error.message);
+			}
+		}
+	}
+	
+	
+	async function callUserApi(name){
+
+		if (!isAuthenticated){
+			setOutput(null);
+			setError("User not authenticated yet.");
+			return;
+		}
+		try{
+			const token = await getAccessTokenSilently();
+			const response = await axios.get(`http://localhost:4000/users/${name}`, {
+				headers: {
+					authorization: `Bearer ${token}`,
+				},
+			});
+			setOutput(response.data);
+			setError(null);
+		}catch (error) {
+			setOutput(null);
+			if (error.response && (error.response.status === 404 || error.response.status === 403)) {
+				setError(error.response.data.message); //"User Not Found" or "Missing required permisisons"
+			} else {
+				setError(error?.message || "Unknown error occurred.");
+			}
 		}
 	}
 
-  return (
+	//allows names like Mary Jane and 'Anna-Marie'	
+	function isTextOnly(input) { 
+		if(input && /^[A-Za-z\s\-]+$/.test(input)){ //exists and meets format
+			return true;  
+		} 
+		return false;
+	} 
+
+  	return (
     <div className="App">
+	
 		<h1>Auth0 authentication</h1>
-		<u1>
+		<ul>
 			<li>
 				<button onClick={loginWithPopup}>Login with Popup</button>
 			</li>
@@ -117,22 +198,61 @@ function App() {
 			<li>
 				<button onClick={logout}>Logout</button>
 			</li>
-		</u1>
+		</ul>
 		<h3>User is { isAuthenticated ? "Logged in" : "Not logged in" }</h3>
 		
-		<u1>
+		<ul>
 			<li><button onClick={callApi}>Call API route</button></li>
 			<li><button onClick={callProtectedApi}>Call Protected API route</button></li>
-			<li><button onClick={callTopSecretApi}>Call Top Secret API route</button></li>
-		</u1>
+			<li><button onClick={callTopSecretApi}>Call View JWT Token</button></li>
+			<li>
+				<input
+				type="text"
+				placeholder="Enter user name"
+				value={userName}
+				onChange={(e) => setUserName(e.target.value)}
+				/>
+				<button onClick={() => {
+					if (isTextOnly(userName)){
+						callUserApi(userName);
+					} else {
+						alert("Only names allowed - no numbers or symbols. Names can have space or dashes.");
+					} 
+				}}>Get specified user's detail from database</button>
+			</li>
+		</ul>
 		
 		{isAuthenticated && (
 			<pre style={{ textAlign: 'start' }}>
 				{JSON.stringify(user, null, 2)}
 			</pre>
 		)}
+		{output && ( 
+
+		        <div style={{ marginTop: '20px' }}> 
+
+		          <h3>API Response:</h3> 
+
+		          <pre>{JSON.stringify(output, null, 2)}</pre> 
+
+		        </div> 
+
+		      )} 
+
+	      {error && (error !== "Unknown error occurred.") && ( 
+
+	        <div style={{ marginTop: '20px', color: 'red' }}> 
+
+	          <h3>Error:</h3> 
+
+	          <p>{error}</p> 
+
+	        </div> 
+
+	      )} 
     </div>
   );
+
 }
 
 export default App;
