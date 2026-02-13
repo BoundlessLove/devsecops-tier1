@@ -136,7 +136,12 @@ function App() {
 			});
 			//console.log(response.data);
 			console.log(token);
-			//setOutput(response.data);
+			if (response.data){
+				setOutput(response.data);			
+				//setOutput(token);
+			}else{
+				setOutput('You are missing permissions to see ProtectedAPI');
+			}
 			setError(null);
 		}catch (error) {
 			setOutput(null);

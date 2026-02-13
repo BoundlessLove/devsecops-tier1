@@ -8,7 +8,9 @@ d. express-jwt - extracts the token automatically from the authorisation header,
 e. jwks-rsa - uses json web key sets to provide token verification.
 
 */
-
+//import  logger from "./logger.js";
+const logger = require('./logger.js'); 
+logger.info("server started");
 const express = require('express'); 
 const swaggerUi = require('swagger-ui-express');
 const swaggerJsDoc = require('swagger-jsdoc');
@@ -98,8 +100,15 @@ const jwtCheck = auth({
  *       200:
  *         description: Welcome message to one and all
  */
+
+
 app.get('/', (req, res) => { 
-  res.send('Hello from index route'); 
+	res.send('Hello from index route'); 
+	try{
+		logger.info(" / API was called")	
+	} catch (err){
+		console.error ("Logging failed:", err);
+	}
 }); 
 
 //app.get('/protected', jwtCheck, (req, res) => { 
@@ -134,11 +143,14 @@ app.get('/protected', verifyJwt, async (req, res) => {
 			authorization: `Bearer ${accessToken}`
 		}	
 	});
-	const userinfo = response.data
+	const userinfo = response.data;
 	console.log(userinfo);
-	res.send(userinfo);  
+	res.send({userinfo});
+	//logger.info("Protected API: "+ JSON.stringify(userinfo, null, 2));
+	logger.info("Protected API: ", {userinfo});	  
   } catch (error) {
-		res.send(error.message)
+		res.send(error.message);
+		logger.info("Protected API: ", error.message);	 
   }
 
 }); 

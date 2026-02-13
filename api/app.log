@@ -1,0 +1,31 @@
+{"level":"info","message":"server started","timestamp":"2026-02-13T00:34:57.014Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-13T00:35:05.493Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-13T00:36:45.457Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-13T00:36:52.655Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-13T00:37:12.551Z"}
+{"level":"info","message":"Protected API: [object Object]","timestamp":"2026-02-13T00:37:14.803Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-13T00:41:24.228Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-13T00:41:34.427Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-13T00:41:38.975Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-13T00:42:27.943Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-13T00:42:33.040Z"}
+{"level":"info","message":"Protected API: [object Object]","timestamp":"2026-02-13T00:42:41.258Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-13T00:43:04.417Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-13T00:43:17.691Z"}
+{"level":"info","message":"Protected API: {\n  \"sub\": \"auth0|68e101f3dc1efef88715ba55\"\n}","timestamp":"2026-02-13T00:43:20.295Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-13T00:44:00.308Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-13T00:44:13.256Z"}
+{"level":"info","message":"Protected API: ","timestamp":"2026-02-13T00:44:15.025Z","userinfo":{"sub":"auth0|68e101f3dc1efef88715ba55"}}
+{"level":"info","message":"server started","timestamp":"2026-02-13T00:44:47.408Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-13T00:44:54.250Z"}
+{"level":"info","message":"Protected API: ","timestamp":"2026-02-13T00:44:56.749Z","userinfo":{"sub":"auth0|68e101f3dc1efef88715ba55"}}
+{"level":"info","message":" / API was called","timestamp":"2026-02-13T00:44:58.995Z"}
+{"level":"info","message":"Protected API: ","timestamp":"2026-02-13T00:45:00.081Z","userinfo":{"sub":"auth0|68e101f3dc1efef88715ba55"}}
+{"level":"info","message":"server started","timestamp":"2026-02-13T00:45:13.999Z"}
+{"level":"info","message":"Protected API: ","timestamp":"2026-02-13T00:45:21.436Z","userinfo":{"sub":"auth0|68e101f3dc1efef88715ba55"}}
+{"level":"info","message":" / API was called","timestamp":"2026-02-13T00:47:17.229Z"}
+{"level":"info","message":"Protected API: ","timestamp":"2026-02-13T00:47:18.642Z","userinfo":{"sub":"auth0|68e101f3dc1efef88715ba55"}}
+{"level":"info","message":" / API was called","timestamp":"2026-02-13T00:50:05.953Z"}
+{"level":"info","message":"Protected API: ","timestamp":"2026-02-13T00:50:07.452Z","userinfo":{"sub":"auth0|68e101f3dc1efef88715ba55"}}
+{"level":"info","message":"Protected API: ","timestamp":"2026-02-13T00:50:18.821Z","userinfo":{"sub":"auth0|68e101f3dc1efef88715ba55"}}
+{"level":"info","message":"Protected API: ","timestamp":"2026-02-13T00:50:26.850Z","userinfo":{"sub":"auth0|68e101f3dc1efef88715ba55"}}
