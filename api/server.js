@@ -15,6 +15,7 @@ const express = require('express');
 const swaggerUi = require('swagger-ui-express');
 const swaggerJsDoc = require('swagger-jsdoc');
 const cors = require('cors'); //required as API client on 3000 and API server on 4000.
+const namespace = "https://systematicdefence.tech/email";
 
 //const jwt = require('express-jwt');
 
@@ -155,6 +156,11 @@ app.get('/protected', verifyJwt, async (req, res) => {
 
 }); 
 
+app.get('/purchase', verifyJwt, async (req, res) => {
+	res.send("<h1>Purchase Page</h1><p>Process payment here.</p>");
+}); 
+
+
 
 /**
  * @swagger
@@ -173,7 +179,48 @@ app.get('/topsecret', verifyJwt, (req, res) => {
 		return res.status(403).json({ message: 'Token viewing Forbidden'});
 	}
   res.send('Hello from top secret.');
+  //res.send(`User permissions: ${permissions.join(", ")}`);
+});
+
+/**
+ * @swagger
+ * /:
+ *   get:
+ *     summary: Gets the name of the user
+ *     responses:
+ *       200:
+ *         description: If user authenticates, then Get their email, 'their unique login id'
+ */	
+
+app.get('/email', verifyJwt, (req, res) => {
+
+
+  try { 
+
+    logger.info("AUTH NOW: " + JSON.stringify(req.auth, null, 2)); 
+
+  
+
+    const email = req.auth["https://systematicdefence.tech/email"]; 
+
+  
+
+    logger.info("Email Claim: " + email); 
+
+  
+
+    return res.json({ email }); 
+
+  } catch (err) { 
+
+    logger.error("Error extracting email claim:", err); 
+
+    return res.status(500).json({ error: "Server error extracting email" }); 
+
+  } 
+
 }); 
+
 
 
 /**

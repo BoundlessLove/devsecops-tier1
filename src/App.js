@@ -1,7 +1,19 @@
-import React, { useState } from 'react'; 
+import React, { useState, useEffect } from 'react'; 
 import axios from 'axios';
 import './App.css';
+//import { useNavigate } from "react-router-dom";
 import { useAuth0 } from '@auth0/auth0-react';
+//import RegisterButton from './Components/RegisterButton';
+//import LoginButton from './Components/LoginButton';
+//import Signup from "./pages/signup";
+import { Routes, Route } from "react-router-dom";
+import PurchaseButton from './Components/PurchaseButton';
+import PurchasePage from './pages/purchase';
+import HomePage from './pages/HomePage';
+import NavbarAuthControls from "./Components/NavbarAuthControls";
+import myPhoto from "./assets/Gita.jpg"
+
+
 function App() {
 	// create hook
 	const {
@@ -17,7 +29,11 @@ function App() {
 //	const { getAccessTokenSilently() } = useAuth0();  
 	const [error, setError] = useState(null);     // Track errors 
 	const [userName, setUserName] = useState('');
+//	const navigate = useNavigate();
+	const [hasApiAccess, setHasApiAccess] = useState(null);
+	const [email, setEmail] = useState(null);
 	
+
 /*	const fetchData = (endpoint) => { 
 
 	  setLoading(true); 
@@ -118,6 +134,54 @@ function App() {
 		}
 	}		
 	
+	async function checkApiAccess() {
+		try {
+			const res = fetch("/protected-api");
+			if (!res.ok) throw new Error("No access");
+			return true;
+		} catch {
+			return false;
+		}
+	}
+	
+	async function getEmail(){
+
+		if (!isAuthenticated){
+			setOutput(null);
+			setError("User not authenticated yet.");
+			return;
+		}
+		try{
+			//const token = await getAccessTokenSilently();
+			const token = await getAccessTokenSilently();
+			const response = await axios.get("http://localhost:4000/email", {
+				headers: {
+					authorization: `Bearer ${token}`,
+				},
+			});
+			//console.log(response.data);
+			if (response.data){
+				setOutput(response.data);
+				//console.log(JSON.stringify(response.data, null, 2));
+				//return JSON.stringify(response.data, null, 2);			
+				//setOutput(token);
+				user.email = response.data.email;
+				return user.email;
+			}else{
+				setOutput('You are missing permissions to see email of logged in user');
+				//console.log(token);
+			}
+			setError(null);
+		}catch (error) {
+			setOutput(null);
+			if (error.response && (error.response.status === 403)) {
+				setError(error.response.data.message); //"User Not Found" or "Missing required permisisons"
+			} else {
+				setError(error?.message || "Unknown error occurred.");
+				//console.log(error.message);
+			}
+		}
+	}
 	
 	async function callProtectedApi(){
 
@@ -135,12 +199,18 @@ function App() {
 				},
 			});
 			//console.log(response.data);
-			console.log(token);
 			if (response.data){
-				setOutput(response.data);			
+				setOutput(`
+					Response:
+					${JSON.stringify(response.data, null, 2)} 
+					
+					JWT:
+					${JSON.stringify(token, null, 2)}
+					`);			
 				//setOutput(token);
 			}else{
 				setOutput('You are missing permissions to see ProtectedAPI');
+				//console.log(token);
 			}
 			setError(null);
 		}catch (error) {
@@ -180,7 +250,6 @@ function App() {
 			}
 		}
 	}
-
 	//allows names like Mary Jane and 'Anna-Marie'	
 	function isTextOnly(input) { 
 		if(input && /^[A-Za-z\s\-]+$/.test(input)){ //exists and meets format
@@ -188,75 +257,94 @@ function App() {
 		} 
 		return false;
 	} 
-
-  	return (
-    <div className="App">
 	
-		<h1>Auth0 authentication</h1>
-		<ul>
-			<li>
-				<button onClick={loginWithPopup}>Login with Popup</button>
-			</li>
-			<li>
-				<button onClick={loginWithRedirect}>Login with Redirect</button>
-			</li>
-			<li>
-				<button onClick={logout}>Logout</button>
-			</li>
-		</ul>
-		<h3>User is { isAuthenticated ? "Logged in" : "Not logged in" }</h3>
+	useEffect(() => {
+		if (isAuthenticated){
+			checkApiAccess().then(setHasApiAccess);
+			//setEmail(getEmail());
+			(async () => {
+				const emailValue = await getEmail();
+				setEmail(emailValue);
+			})();
+		}
+	}, [isAuthenticated]);
+  	return (
+		<>
+	    <div className="App">
 		
-		<ul>
-			<li><button onClick={callApi}>Call API route</button></li>
-			<li><button onClick={callProtectedApi}>Call Protected API route</button></li>
-			<li><button onClick={callTopSecretApi}>Call View JWT Token</button></li>
-			<li>
-				<input
-				type="text"
-				placeholder="Enter user name"
-				value={userName}
-				onChange={(e) => setUserName(e.target.value)}
-				/>
-				<button onClick={() => {
-					if (isTextOnly(userName)){
-						callUserApi(userName);
-					} else {
-						alert("Only names allowed - no numbers or symbols. Names can have space or dashes.");
-					} 
-				}}>Get specified user's detail from database</button>
-			</li>
-		</ul>
-		
-		{isAuthenticated && (
-			<pre style={{ textAlign: 'start' }}>
-				{JSON.stringify(user, null, 2)}
-			</pre>
-		)}
-		{output && ( 
-
-		        <div style={{ marginTop: '20px' }}> 
-
-		          <h3>API Response:</h3> 
-
-		          <pre>{JSON.stringify(output, null, 2)}</pre> 
-
+			<h1>Late Grandmother Kumari Raj Sarna's last wish- परमात्मा सबको सद्बुद्धि देवे</h1>
+			<h3>User: {email ?? "Not Logged in"} </h3>
+			<div>
+				<img src={myPhoto} alt="My Photo" />
+			</div>
+			<ul>
+				<NavbarAuthControls />
+			</ul>
+			<ul>
+				<li><button onClick={callApi}>Call API route</button></li>
+				<li><button onClick={callProtectedApi}>Call Protected API route</button></li>
+				
+				{isAuthenticated && hasApiAccess === false && (
+					<li>
+						<PurchaseButton />
+					</li>
+				)}
+				
+				
+				<li><button onClick={callTopSecretApi}>Call View JWT Token</button></li>
+				<li>
+					<input
+					type="text"
+					placeholder="Enter user name"
+					value={userName}
+					onChange={(e) => setUserName(e.target.value)}
+					/>
+					<button onClick={() => {
+						if (isTextOnly(userName)){
+							callUserApi(userName);
+						} else {
+							alert("Only names allowed - no numbers or symbols. Names can have space or dashes.");
+						} 
+					}}>Get specified user's detail from database</button>
+				</li>
+			</ul>
+			
+			{isAuthenticated && (
+				<pre style={{ textAlign: 'start' }}>
+					{JSON.stringify(user, null, 2)}
+				</pre>
+			)}
+			{output && ( 
+	
+			        <div style={{ marginTop: '20px' }}> 
+	
+			          <h3>API Response:</h3> 
+	
+			          <pre>{JSON.stringify(output, null, 2)}</pre> 
+	
+			        </div> 
+	
+			      )} 
+	
+		      {error && (error !== "Unknown error occurred.") && ( 
+	
+		        <div style={{ marginTop: '20px', color: 'red' }}> 
+	
+		          <h3>Error:</h3> 
+	
+		          <p>{error}</p> 
+	
 		        </div> 
-
+	
 		      )} 
-
-	      {error && (error !== "Unknown error occurred.") && ( 
-
-	        <div style={{ marginTop: '20px', color: 'red' }}> 
-
-	          <h3>Error:</h3> 
-
-	          <p>{error}</p> 
-
-	        </div> 
-
-	      )} 
-    </div>
+	    </div>
+		<Routes>
+			<Route path="/" element={<HomePage />} />
+			<Route path="/purchase" element={<PurchasePage />} />
+		</Routes>
+	</>
   );
+  
 
 }
 
