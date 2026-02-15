@@ -14,7 +14,7 @@ root.render(
 		clientId='apombnwMiJWNICbzBmar3rxMt48XOwYr'
 		authorizationParams={{
 			redirect_Uri: window.location.origin,
-			audience: "this is a unique identifier",
+			audience: "https://www.systematicdefence.tech",
 			scope: "offline_access"
 		}}
 	>
