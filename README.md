@@ -50,6 +50,9 @@ Answer: There are three ways- Github action, Post-pull hook on Fastcommet with S
 16 Feb 2026 18:00: Fixed problems in .cpanel.yml yml syntax.
 ##### Version 0.8.2
 16 Feb 2026 18:41: There is no node or npm on fastcomet. Hence, setup a node project and connected deployment yaml to use its bin folder for executing npm install and npm build.
+##### Version 0.8.3
+16 Feb 2026 18:54: To the .cpanel.yml, added command to restart 
+
 
 ##APPENDIX 1.0##
 You’re absolutely right about the root cause: FastComet is serving your built React app, so pulling new code from GitHub won’t change anything until you run: 

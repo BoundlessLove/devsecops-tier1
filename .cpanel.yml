@@ -5,4 +5,5 @@ deployment:
     - export DEPLOYPATH=/home/systema1/dev
     - $NODEBIN/npm install --prefix /home/systema1/dev
     - $NODEBIN/npm run build --prefix /home/systema1/dev
-    - /bin/rsync -av --delete /home/systema1/dev/build/ $DEPLOYPATH/	
+    - /bin/rsync -av --delete /home/systema1/dev/build/ $DEPLOYPATH/
+    - /usr/local/bin/ea-nodejs-cli --app /home/systema1/nodevenv restart	
