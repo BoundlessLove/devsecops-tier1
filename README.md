@@ -3,6 +3,12 @@
 ## Purpose of code
 Modern Implementation of OAuth using help from Mr. Mittal (Mafia Codes, 2021, Mar, 28). 
 
+SERVER REPO NAME IN GITHUB: items4sale-api
+SERVER DOMAIN NAME, HOSTED ON FASTCOMET: https://devapiserver.systematicdefence.tech
+
+CLIENT REPO SELF NAME IN GITHUB: webstore
+CLIENT DOMAIN NAME, HOSTED ON FASTCOMET: https://webstore.systematicdefence.tech
+
 ### Major Versions 
 
 #### Version 0.0
@@ -18,5 +24,8 @@ Modern Implementation of OAuth using help from Mr. Mittal (Mafia Codes, 2021, Ma
 13 Feb 2026 14:00: Logging has been applied to API Server. All four APIs functional.
 ##### Version 0.6
 14 Feb 2026 15:47: When a new user is registered, automatically a stripe account for them is created. Product has been created and a start has been made for the flow for buying api. Finally, when a person logs in, now their unique email address is shown on the page. 
+##### Version 0.7
+16 Feb 2026 14:12: Move to https://www.webstore.systematicdefence.tech completed successfully. React Website's UI components rendering properly. All code is in repositories in Github. In this release, Uudated API server references to match the Dev Server environment, so APIs from hyper-v test environment that had broken after migration, can start working again.
+
 REFERENCES
 1. Mafia Codes.(2021, Mar, 28). YouTube- Auth0 authentication in Reactjs using OAuth2. <url> 
