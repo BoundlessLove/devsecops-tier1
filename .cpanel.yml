@@ -1,7 +1,8 @@
 ---
 deployment:
   tasks:
+    - export NODEBIN=/home/systema1/nodevenv/dev/20/bin
     - export DEPLOYPATH=/home/systema1/dev
-    - /bin/npm install --prefix /home/systema1/dev
-    - /bin/npm run build --prefix /home/systema1/dev
+    - $NODEBIN/npm install --prefix /home/systema1/dev
+    - $NODEBIN/npm run build --prefix /home/systema1/dev
     - /bin/rsync -av --delete /home/systema1/dev/build/ $DEPLOYPATH/	
