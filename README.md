@@ -5,9 +5,11 @@ Modern Implementation of OAuth using help from Mr. Mittal (Mafia Codes, 2021, Ma
 
 SERVER REPO NAME IN GITHUB: items4sale-api
 SERVER DOMAIN NAME, HOSTED ON FASTCOMET: https://devapiserver.systematicdefence.tech
+FASTCOMET FOLDER NAME: Devapiserver
 
 CLIENT REPO SELF NAME IN GITHUB: webstore
 CLIENT DOMAIN NAME, HOSTED ON FASTCOMET: https://webstore.systematicdefence.tech
+FASTCOMET FOLDER NAME: Dev 
 
 ### Major Versions 
 
@@ -26,6 +28,8 @@ CLIENT DOMAIN NAME, HOSTED ON FASTCOMET: https://webstore.systematicdefence.tech
 14 Feb 2026 15:47: When a new user is registered, automatically a stripe account for them is created. Product has been created and a start has been made for the flow for buying api. Finally, when a person logs in, now their unique email address is shown on the page. 
 ##### Version 0.7
 16 Feb 2026 14:12: Move to https://www.webstore.systematicdefence.tech completed successfully. React Website's UI components rendering properly. All code is in repositories in Github. In this release, Uudated API server references to match the Dev Server environment, so APIs from hyper-v test environment that had broken after migration, can start working again.
+##### Version 0.7.1
+16 Feb 2026 14:51: Added fastcomet folder name, which is connected to Github, for server and client. There are three branches- local (hyper-v environment on local workstation), dev (self) and master(Production). 
 
 REFERENCES
 1. Mafia Codes.(2021, Mar, 28). YouTube- Auth0 authentication in Reactjs using OAuth2. <url> 
