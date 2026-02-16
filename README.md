@@ -15,13 +15,13 @@ Note: After every change made to github:
 
 ***Use Cpanel Git repo to update from remote and run deployment tasks***
 
-## Fastcomet React App Setup Curly ##
+## Curly Fastcomet React App Setup  ##
 
 The application uses react technology, and is a single page application (SPA) for simplicity. It is sitting on Github, from where I push changes to fastcomet. Whenever manually push changes to code upto Github, and then pull the changes back down to Fastcomet, none of that applies to the react web application.
 
 This occurs because first NPM build command needs to be run. Is there a build task to happen in an automated manner, when the code is pulled in fastcomet, like via a triggered YAML file I wondered. 
 
-Answer: There are three ways- Github action, Post-pull hook on Fastcommet with SSH key use, and Fastcomet's Git Version Control with Deployment script. The latter one suits me most as it is the shorted perceived route, at this time. See Appendix 1.0 for rationale. Basically, the deployment script is a .yml file called .cpanel.yml, and it is driven by a button in Cpanel Git repo. Cpanel git repo also has a button for updating repo from remote. Idea is that both will be run at the same time. 
+Answer: There are three ways- Github action, Post-pull hook on Fastcommet with SSH key use, and Fastcomet's Git Version Control with Deployment script. The latter one suits me most as it is the shorted perceived route, at this time. See Appendix 1.0 for rationale. Basically, the deployment script is a .yml file called .cpanel.yml, and it is driven by a button in Cpanel Git repo. Cpanel git repo also has a button for updating repo from remote. Idea is that both will be run at the same time. In the end it did not work, and I just manually ran 'npm install' and 'npm run build' on workstation and commited them into GitHub.
 
 
 

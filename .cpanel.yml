@@ -12,4 +12,4 @@ deployment:
     # Deploy build output 
     - /bin/rsync -av --delete $REPOPATH/build/ $DEPLOYPATH/ 
     # Restart Node.js app 
-    - /usr/local/bin/ea-nodejs-cli --app /home/systema1/dev restart	 
+    - /usr/local/bin/ea-nodejs-cli --app /home/systema1/dev restart

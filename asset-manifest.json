@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.f855e6bc.css",
+    "main.js": "/static/js/main.f46f8788.js",
+    "static/js/453.3c755954.chunk.js": "/static/js/453.3c755954.chunk.js",
+    "static/media/Gita.jpg": "/static/media/Gita.7d4c2580037aba2ba9cd.jpg",
+    "index.html": "/index.html",
+    "main.f855e6bc.css.map": "/static/css/main.f855e6bc.css.map",
+    "main.f46f8788.js.map": "/static/js/main.f46f8788.js.map",
+    "453.3c755954.chunk.js.map": "/static/js/453.3c755954.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.f46f8788.js"
+  ]
+}
