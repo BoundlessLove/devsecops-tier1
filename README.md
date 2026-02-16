@@ -46,6 +46,8 @@ Answer: There are three ways- Github action, Post-pull hook on Fastcommet with S
 16 Feb 2026 14:51: Added fastcomet folder name, which is connected to Github, for server and client. There are three branches- local (hyper-v environment on local workstation), dev (self) and master(Production). 
 ##### Version 0.8
 16 Feb 2026 14:51: Deployment yml added to manage deployment tasks after cpanel git update.
+##### Version 0.8.1
+16 Feb 2026 18:00: Fixed problems in .cpanel.yml yml syntax.
 
 ##APPENDIX 1.0##
 You’re absolutely right about the root cause: FastComet is serving your built React app, so pulling new code from GitHub won’t change anything until you run: 
