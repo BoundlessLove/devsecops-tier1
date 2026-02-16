@@ -11,6 +11,20 @@ CLIENT REPO SELF NAME IN GITHUB: webstore
 CLIENT DOMAIN NAME, HOSTED ON FASTCOMET: https://webstore.systematicdefence.tech
 FASTCOMET FOLDER NAME: Dev 
 
+Note: After every change made to github:
+
+***Use Cpanel Git repo to update from remote and run deployment tasks***
+
+## Fastcomet React App Setup Curly ##
+
+The application uses react technology, and is a single page application (SPA) for simplicity. It is sitting on Github, from where I push changes to fastcomet. Whenever manually push changes to code upto Github, and then pull the changes back down to Fastcomet, none of that applies to the react web application.
+
+This occurs because first NPM build command needs to be run. Is there a build task to happen in an automated manner, when the code is pulled in fastcomet, like via a triggered YAML file I wondered. 
+
+Answer: There are three ways- Github action, Post-pull hook on Fastcommet with SSH key use, and Fastcomet's Git Version Control with Deployment script. The latter one suits me most as it is the shorted perceived route, at this time. See Appendix 1.0 for rationale. Basically, the deployment script is a .yml file called .cpanel.yml, and it is driven by a button in Cpanel Git repo. Cpanel git repo also has a button for updating repo from remote. Idea is that both will be run at the same time. 
+
+
+
 ### Major Versions 
 
 #### Version 0.0
@@ -30,6 +44,181 @@ FASTCOMET FOLDER NAME: Dev
 16 Feb 2026 14:12: Move to https://www.webstore.systematicdefence.tech completed successfully. React Website's UI components rendering properly. All code is in repositories in Github. In this release, Uudated API server references to match the Dev Server environment, so APIs from hyper-v test environment that had broken after migration, can start working again.
 ##### Version 0.7.1
 16 Feb 2026 14:51: Added fastcomet folder name, which is connected to Github, for server and client. There are three branches- local (hyper-v environment on local workstation), dev (self) and master(Production). 
+##### Version 0.8
+16 Feb 2026 14:51: Deployment yml added to manage deployment tasks after cpanel git update.
 
-REFERENCES
+##APPENDIX 1.0##
+You’re absolutely right about the root cause: FastComet is serving your built React app, so pulling new code from GitHub won’t change anything until you run: 
+
+npm install 
+npm run build 
+ 
+
+The good news is that you can automate this — but the exact method depends on how your FastComet hosting is set up. Let me walk you through the realistic options and the one that usually works best. 
+
+ 
+
+⭐ The Short Answer 
+
+Yes — you can automate the build step, but FastComet does not automatically run build commands on git pull. You must set up one of these: 
+
+Option A — Use GitHub Actions to build and deploy the built files 
+
+(Recommended — avoids needing Node on FastComet) 
+
+Option B — Use a post‑pull hook on FastComet (if SSH access is available) 
+
+A script that runs automatically after you pull. 
+
+Option C — Use cPanel’s Git Version Control + Deployment Script 
+
+FastComet supports this, and it’s the easiest if you want automation on the server. 
+
+ 
+
+🟦 Option A — GitHub Actions (Best for React apps) 
+
+Instead of building on FastComet, you build on GitHub and deploy the build/ folder to FastComet via FTP or SFTP. 
+
+Example GitHub Actions workflow (deploy.yml) 
+
+This runs automatically whenever you push to main: 
+
+------
+
+name: Deploy React App 
+ 
+on: 
+ push: 
+   branches: [ "main" ] 
+ 
+jobs: 
+ build: 
+   runs-on: ubuntu-latest 
+ 
+   steps: 
+     - uses: actions/checkout@v3 
+ 
+     - name: Install dependencies 
+       run: npm install 
+ 
+     - name: Build React app 
+       run: npm run build 
+ 
+     - name: Deploy to FastComet via SFTP 
+       uses: wlixcc/SFTP-Deploy-Action@v1.2.4 
+       with: 
+         server: ${{ secrets.FASTCOMET_HOST }} 
+         username: ${{ secrets.FASTCOMET_USER }} 
+         password: ${{ secrets.FASTCOMET_PASS }} 
+         local_path: "./build/*" 
+         remote_path: "/public_html/" 
+ 
+-----
+This way: 
+
+GitHub builds your app 
+
+Only the final static files are uploaded 
+
+FastComet doesn’t need Node, npm, or build tools 
+
+This is the cleanest and most reliable setup. 
+
+ 
+
+🟩 Option B — Post‑pull hook on FastComet (if using SSH) 
+
+If you SSH into FastComet and run git pull manually, you can automate the build by adding a post-merge hook. 
+
+Inside your repo on FastComet: 
+
+cd /path/to/your/repo/.git/hooks 
+nano post-merge 
+ 
+
+Add: 
+
+ #!/bin/bash 
+cd /path/to/your/app 
+npm install 
+npm run build 
+ 
+
+Then: 
+
+chmod +x post-merge 
+ 
+
+Now every time you run git pull, the build happens automatically. 
+
+ 
+
+🟧 Option C — cPanel Git Deployment Script (FastComet supports this) 
+
+If you created your repo inside cPanel → Git Version Control, you can attach a deployment script. 
+
+In cPanel: 
+
+Pre-req: Run command to enable creation of new folder for dev: 'mv dev dev_old'
+
+Go to Git Version Control 
+
+Select your repo 
+
+Click Manage 
+
+Add a Deployment Script 
+
+Example script: 
+
+ #!/bin/bash 
+cd /home/youruser/repo 
+npm install 
+npm run build 
+cp -r build/* /home/youruser/public_html/ 
+ 
+
+Now every time you click Pull, cPanel runs the script. 
+
+ 
+
+🟦 Which option should you use? 
+
+If your React app is a typical static site (SPA), then: 
+
+✔ Use GitHub Actions if: 
+
+You want true automation 
+
+You don’t want Node installed on FastComet 
+
+You want clean CI/CD 
+
+✔ Use cPanel Deployment Script if: 
+
+You prefer building on the server 
+
+You use cPanel’s Git integration 
+
+✔ Use post-merge hook if: 
+
+You SSH into FastComet and run git pull manually 
+
+ 
+
+If you want, I can generate the exact YAML file or deployment script tailored to: 
+
+Your repo name 
+
+Your FastComet folder structure 
+
+Whether you use FTP, SFTP, or cPanel Git 
+
+Just tell me how your FastComet environment is set up. 
+
+ 
+
+
+##REFERENCES##
 1. Mafia Codes.(2021, Mar, 28). YouTube- Auth0 authentication in Reactjs using OAuth2. <url> 

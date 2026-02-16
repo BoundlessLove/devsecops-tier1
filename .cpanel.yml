@@ -1,0 +1,7 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/systema1/dev
+	- /bin/npm install --prefix /home/systema1/dev
+	- /bin/npm run build --prefix /home/systema1/dev
+	- /bin/rsync -av --delete /home/systema1/dev/build/ $DEPLOYPATH/	
