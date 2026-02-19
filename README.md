@@ -82,7 +82,11 @@ Here’s the timeline:
 6. Uploads the contents of the build folder to the server root.
 
 ##### Version 0.12
-20 Feb 2026 10:21: Added capability to self deploy to Github. Required the machine to be setup to use Gitbash for node scripts, and add your SSH key to access Github into your SSH agent (ssh-add ~/.ssh/<Private Key file>). Further, a config file needed to be added, which allowed only the owner (windows user) to perform github deployments.
+20 Feb 2026 10:21: Added capability to self deploy to Github. Following command was run to force Git to use Windows OpenSSH: 
+- git config --global core.sshCommand "C:/Windows/System32/OpenSSH/ssh.exe"
+Test SSH connection using:
+- git ls-remote git@github.com:BoundlessLove/webstore.git
+
 
 
 ##APPENDIX 1.0##
