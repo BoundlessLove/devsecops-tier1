@@ -82,7 +82,7 @@ Here’s the timeline:
 6. Uploads the contents of the build folder to the server root.
 
 ##### Version 0.12
-20 Feb 2026 10:21: Added capability to self deploy to Github. Required the machine to be setup to use Gitbash for node scripts. 
+20 Feb 2026 10:21: Added capability to self deploy to Github. Required the machine to be setup to use Gitbash for node scripts, and add your SSH key to access Github into your SSH agent (ssh-add ~/.ssh/<Private Key file>). 
 
 
 ##APPENDIX 1.0##
