@@ -64,6 +64,23 @@ a. Remove the old static folder: rm -rf ./static
 b.  Copy the new static folder into the root: cp -r ./build/static ./
 c. Copy only the top level files from build: cp -r ./build/*.* ./
 
+##### Version 0.11.01
+20 Feb 2026 08:00: [NOT IMPLEMENTED] I did think about pushing code to github via the project.json scripts section, the ideal state. This can be handled at a later date. It requires a seamless connection to github from the PC hosting the development instance of the repository. In particular, setting a SSH connection to Github repo via  "git remote set-url origin git@github.com:username/repo.git". This would require Github to be setup to take passwordless authentication from the local server.
+{
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "git add . && git commit -m 'Deploy' && git push && ssh user@server 'rm -rf /home/<user>/public_html/*' && rsync -avz ./build/ user@server:/home/<user>/public_html/"
+  }
+}
+
+Here’s the timeline:
+1. Creates a fresh  folder locally.
+2. Adds only source files (because  is in ).
+3. Commits your source code changes.
+4. Pushes your source code to GitHub via SSH.
+5. Clears the server’s root folder.
+6. Uploads the contents of the build folder to the server root.
+
 
 ##APPENDIX 1.0##
 You’re absolutely right about the root cause: FastComet is serving your built React app, so pulling new code from GitHub won’t change anything until you run: 
