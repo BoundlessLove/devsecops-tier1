@@ -55,6 +55,9 @@ Answer: There are three ways- Github action, Post-pull hook on Fastcommet with S
 ##### Version 0.9
 19 Feb 2026 13:57: Troubleshooting to get the page to render again. I pulled in version 0.8.3 into live environment. The button to run the .cpanel.yml deployment script did not work and the react app stopped rendering. So, I did those steps in .cpanel.yml manually for now, and pulled code up again. The app still did not render. While troubleshooting I realised that in my fastcomet repo, I had a .htaccess file, which was overwritten when I pulled up the code, i.e. there is no .htaccess file in this repo. So version 0.9 has the .htaccess file.
 
+##### Version 0.10 
+19 Feb 2026 18:14: Added capability to run code on local machine via adding .env.production and .env.development files, and updating app.js accordingly. Confirmed as working in development /'local PC' environment. Need to write code that will do the .cpanel.yml work locally in an automated fashion.
+
 ##APPENDIX 1.0##
 You’re absolutely right about the root cause: FastComet is serving your built React app, so pulling new code from GitHub won’t change anything until you run: 
 

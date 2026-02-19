@@ -34,8 +34,9 @@ function App() {
 	const [hasApiAccess, setHasApiAccess] = useState(null);
 	const [email, setEmail] = useState(null);
 	
-	const devClient = "https://webstore.systematicdefence.tech";
-	const devServer = "https://devapiserver.systematicdefence.tech";
+	const devClient = process.env.REACT_APP_DEV_CLIENT;
+	const devServer = process.env.REACT_APP_DEV_SERVER;
+	
 /*	const fetchData = (endpoint) => { 
 
 	  setLoading(true); 
@@ -82,12 +83,24 @@ function App() {
 
 	); */
 	
-	function callApi(){
+/*	function callApi(){
 		axios.get(devServer)
 		 .then(response => setOutput(response.data), setError(null))
 			.catch(error => setOutput(null), setError(error?.message || "Unknown error occurred."))
 //			.then(response => console.log(response.data))
 //			.catch(error => console.log(error.message))
+	}*/
+	
+	function callApi() {
+	  axios.get(devServer)
+	    .then(response => {
+	      setOutput(response.data);
+	      setError(null);
+	    })
+	    .catch(error => {
+	      setOutput(null);
+	      setError(error?.message || "Unknown error occurred.");
+	    });
 	}
 	
 	async function callTopSecretApi(){
