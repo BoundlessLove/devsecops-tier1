@@ -58,6 +58,13 @@ Answer: There are three ways- Github action, Post-pull hook on Fastcommet with S
 ##### Version 0.10 
 19 Feb 2026 18:14: Added capability to run code on local machine via adding .env.production and .env.development files, and updating app.js accordingly. Confirmed as working in development /'local PC' environment. Need to write code that will do the .cpanel.yml work locally in an automated fashion.
 
+##### Version 0.11
+20 Feb 2026 07:47: Added capability in scripts section of project.json to move build folder output to project root after build completed via command  "build": "react-scripts build && npm run move-build". What "move-build" does:
+a. Remove the old static folder: rm -rf ./static
+b.  Copy the new static folder into the root: cp -r ./build/static ./
+c. Copy only the top level files from build: cp -r ./build/*.* ./
+
+
 ##APPENDIX 1.0##
 You’re absolutely right about the root cause: FastComet is serving your built React app, so pulling new code from GitHub won’t change anything until you run: 
 
