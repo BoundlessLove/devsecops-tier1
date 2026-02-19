@@ -81,6 +81,9 @@ Here’s the timeline:
 5. Clears the server’s root folder.
 6. Uploads the contents of the build folder to the server root.
 
+##### Version 0.12
+20 Feb 2026 10:21: Added capability to self deploy to Github. Required the machine to be setup to use Gitbash for node scripts. 
+
 
 ##APPENDIX 1.0##
 You’re absolutely right about the root cause: FastComet is serving your built React app, so pulling new code from GitHub won’t change anything until you run: 

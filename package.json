@@ -23,7 +23,10 @@
     "build": 	"react-scripts build && npm run move-build",
 	"move-build": "rm -rf ./static && cp -r ./build/static ./ && cp -r ./build/*.* ./",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+	"deploy": "npm run build && git add . && git commit -m \"Deploy - $(date '+%Y-%m-%d %H:%M:%S')\" && git push",
+	"whatshell": "echo $0"
   },
   "eslintConfig": {
     "extends": [
