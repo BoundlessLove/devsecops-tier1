@@ -1,7 +1,13 @@
 # Versions
 
-## Purpose of code
-Modern Implementation of OAuth using help from Mr. Mittal (Mafia Codes, 2021, Mar, 28). 
+## Purpose of code ##
+In 2026, Identity management is crucial in the success of any application. To merge common needs of Authenticatio and Authorisation, such as single signon (needs domain controller) and defence against Cybersecurity vectors such as DDOS and encryption breaking attacks, and OpenID access, given an application exists on the web, a platform like OAuth is ideal for small to medium sized business inorder to scale down infrastructure costs. Heck, this application does not even have a database, and yet it uses oAuth for all communciations implementing perfect Authentication and Authorisation. Refer to Appendix 2.0 to understand how to implement a simple solution like this in Auth0. I started the solution of this modern Implementation of OAuth using Auth0 with help from Mr. Mittal (Mafia Codes, 2021, Mar, 28). 
+
+Note: If 'npm run dev' is run, then it creates a client and an api server instance on ports 3000 and 4000, respectively. The api server here is a stub, which exists within the client. When existing in this dev environment, the server exists but the client does not. To exist from client use command:
+
+- npx kill-port 3000   (i may need to create a devkill task in NPM) 
+
+## Metadata and identification information for code ##
 
 SERVER REPO NAME IN GITHUB: items4sale-api
 SERVER DOMAIN NAME, HOSTED ON FASTCOMET: https://devapiserver.systematicdefence.tech
@@ -87,6 +93,8 @@ Here’s the timeline:
 Test SSH connection using:
 - git ls-remote git@github.com:BoundlessLove/webstore.git
 
+##### Version 0.13
+20 Feb 2026 14:38: Fixed api access issues from client in dev and production
 
 
 ##APPENDIX 1.0##
@@ -258,6 +266,37 @@ Your FastComet folder structure
 Whether you use FTP, SFTP, or cPanel Git 
 
 Just tell me how your FastComet environment is set up. 
+
+##APPENDIX 2.0- How Auth0 works?##
+
+###Scenario###
+The solution has two components:
+a. Backend: Node.js app
+b. Front end: React Node.js app
+
+###Workflow###
+For the solution to work, in Auth0, create instances of an SPA and an API each. When you created the API in Auth0 and enabled RBAC, enabled ‘Permissions in Access Token’, created permissions (such as read:token and view:protected) and in Application Access tab of the API, authorised your SPA to request tokens, then:
+
+Auth0 must:
+1. 	Validate that the API exists
+2. 	Validate that the SPA is allowed to request tokens for it
+3. 	Validate that the SPA is allowed to request the scopes
+4. 	Validate that the API has permissions defined
+5. 	Validate that the SPA is authorized under “Application Access”
+6. 	Validate that the scopes requested match the API’s permissions
+
+The question then arises that the real backed apis are at url https://www.devapiserver.systematicdefence.tech or http://localhost:4000. There are about five. Should a separate API instance be created for each api endpoint?
+
+The answer is no. The Auth0 API instance you created has permissions setup, which will enable you to decide which user is authorised to consume individual api endpoints. See Appendix 1.0 for details. In my case, my API identifier is neither: 
+
+a. https://www.devapiserver.systematicdefence.tech, or 
+b. http://localhost:4000
+
+My identifier is “this is a unique identifier”, and it is used by both backend. The reason it works is because its reasons for living is that the SPA application just uses it for:
+
+- retrieving permissions
+
+So, the SPA’s code has the logic to interpret what the permissions translate to when making API calls to the backend api server. Depending on whether the application is running in dev or production (within .env variable files and managed by scripts section in package.json file), the actual API endpoints are automatically adjusted. 
 
  
 

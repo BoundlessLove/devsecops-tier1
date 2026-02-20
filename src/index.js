@@ -10,11 +10,11 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
   	<Auth0Provider
-		domain='dev-5ytq8xlvrdmg2d03.us.auth0.com'
-		clientId='apombnwMiJWNICbzBmar3rxMt48XOwYr'
+		domain={process.env.REACT_APP_DEV_AUTHO_DOMAIN}
+		clientId={process.env.REACT_APP_DEV_AUTHO_CLIENT_ID}
 		authorizationParams={{
-			redirect_Uri: window.location.origin,
-			audience: "https://www.systematicdefence.tech",
+			redirect_uri: window.location.origin,
+			audience: "this is a unique identifier",
 			scope: "offline_access"
 		}}
 	>

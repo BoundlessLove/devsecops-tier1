@@ -4,14 +4,20 @@ import Signup from "../pages/signup";
 
 function NavbarAuthControls() { 
 	const { isAuthenticated, loginWithPopup, logout} = useAuth0(); 
+	const handleLogin = async () => {
+		console.log("Login button clicked — calling loginWithPopup()");	
+	  try {
+	    await loginWithPopup();
+	  } catch (e) {
+	    console.error("Auth0 Popup Error:", e);
+	  }
+	};
   return (
 	<>
 		{isAuthenticated ? ( 	
 			<li>
 			<button onClick={() => logout({ returnTo: window.location.origin })}> 
-
 			  Logout 
-
 			</button> 
 				</li>	
 			) : (
@@ -20,7 +26,7 @@ function NavbarAuthControls() {
 					<Signup />
 				</li>
 				<li>
-					<button onClick={loginWithPopup}> 
+					<button onClick={handleLogin}> 
 					  Login with Popup 
 					</button> 
 				</li>
