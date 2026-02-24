@@ -1,167 +1,160 @@
-import { useState } from "react"; 
+import { useState } from "react";
+import axios from "axios";
 
-import axios from "axios"; 
+function Signup() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [code, setCode] = useState("");
+  const [stage, setStage] = useState("enter"); // enter → verify → done
+  const [error, setError] = useState("");
+  const cancelSignup = () => {
+    setStage("enter");
+    setPassword("");
+    setConfirmPassword("");
+    setCode("");
+    setError("");
+  };
 
-  
+  const sendCode = async (e) => {
+    e.preventDefault();
+    setError("");
 
-function Signup() { 
+    try {
+      await axios.post(`${process.env.REACT_APP_DEV_EMAIL_API_SERVER}/send-code`, { email });
+      setStage("verify");
+    } catch {
+      setError("Could not send verification code");
+    }
+  };
 
-  const [email, setEmail] = useState(""); 
+  const verifySignup = async (e) => {
+    e.preventDefault();
+    setError("");
 
-  const [password, setPassword] = useState(""); 
-
-  const [error, setError] = useState(""); 
-
-  
-
-  const handleSignup = async (e) => { 
-
-    e.preventDefault(); 
-
-  
-
-    try { 
-
-      await axios.post(`https://dev-5ytq8xlvrdmg2d03.us.auth0.com/dbconnections/signup`, { 
-
-        client_id: "apombnwMiJWNICbzBmar3rxMt48XOwYr", 
-
-        email, 
-
-        password, 
-
-        connection: "Username-Password-Authentication" 
-
-      }); 
-
+    // 🔒 Passwords must match
+    if (password !== confirmPassword) {
+      setError("Passwords do not match. Please re-enter them.");
+      setPassword("");
+      setConfirmPassword("");
+      return;
+    }
 	
+	// 🔒 Password must meet strength rules
+	if (!isPasswordValid(password)) {
+	  setError(
+	    "Password must be 8–20 characters long and include one uppercase letter, one number, and one special character."
+	  );
+	  return;
+	}
 
-      // Signup succeeded → redirect to login 
-		
-	  //window.location.href = getAuth0LoginUrl(
-	  //			"Sign up successful. Please log in instead."); 
-	  setError("Sign up successful. Please log in instead.");
+
+
+    try {
+      await axios.post(`${process.env.REACT_APP_DEV_EMAIL_API_SERVER}/verify-signup`, {
+        email,
+        password,
+        code
+      });
+
+      setError("Signup successful. Please log in.");
+      setStage("done");
+
+    } catch (err) {
+      // Extract error code from backend response
+      const auth0Code = err.response?.data?.code;
+
+      if (auth0Code === "invalid_password") {
+        setError(
+          "Invalid Password used. Need at least 8 characters, with one char each of type uppercase, number and special character."
+        );
+      } else if (auth0Code === "invalid_signup") {
+        setError("The Email Address already has an account. Please log in instead.");
+      } else {
+        setError("Something went wrong. Please try again.");
+      }
+    }
+  };
   
+  function isPasswordValid(pwd) {
+    const lengthOK = pwd.length >= 8 && pwd.length <= 20;
+    const hasUpper = /[A-Z]/.test(pwd);
+    const hasNumber = /[0-9]/.test(pwd);
+    const hasSpecial = /[^A-Za-z0-9]/.test(pwd);
 
-    } catch (e) { 
+    return lengthOK && hasUpper && hasNumber && hasSpecial;
+  };
 
-      const code = JSON.stringify(e.response?.data?.code); 
-	  const signupmessage = JSON.stringify(e.response?.data?.description); 
 
-		//console.log(code+ ": "+ signupmessage);
-  		//setError(code+ ": "+ signupmessage);
-		//setError(code);
-		if (code.includes("invalid_password")){
-			setError("Invalid Password used. Need at least 8 characters, with one char each of type uppercase, number and special character."); 
-		}else if (code.includes("invalid_signup")){
-			setError("The Email Address already has an account. Please log in instead."); 
-		}else{
-			setError("Something went wrong. Please try again. "); 
-		}
-		return;
-/*
-      //if (code.includes("invalid_signup")) { 
-		if (signupmessage.includes("The user already exists.")) {
-		//redirect to Auth0 login with custom message
-		//window.location.href = getAuth0LoginUrl(
-		//	"You already have an account. Please log in instead."); 		
-        setError("The Email Address already has an account. Please log in instead."); 
-    	return;  
-	} else { 
-		//setError("Full ERROR: "+ JSON.stringify(e.response?.data, null, 2));
-        setError("Something went wrong. Please try again. "); 
 
-      } 
-*/
-    } 
+  return (
+    <form onSubmit={stage === "enter" ? sendCode : verifySignup}>
+      <h2>Create Account</h2>
 
-  }; 
-  
-  function getAuth0LoginUrl(msg) { 
+      {error && <p style={{ color: "red" }}>{error}</p>}
 
-    const domain = `dev-5ytq8xlvrdmg2d03.us.auth0.com/auth0.com`; 
-
-    const clientId = "apombnwMiJWNICbzBmar3rxMt48XOwYr"; 
-
-    const redirectUri = "http://localhost:3000/"; // or your SPA callback 
-
-    
-
-    const params = new URLSearchParams({ 
-
-      client_id: clientId, 
-
-      redirect_uri: redirectUri, 
-
-      response_type: "code", 
-	  error: "access_denied",
-      error_description: msg 
-    }); 
-
-    
-
-    return `https://${domain}/authorize?${params.toString()}`; 
-
-  } 
-
-   
-
-  
-
-  return ( 
-
-    <form onSubmit={handleSignup}> 
-
-      <h2>Create Account</h2> 
-
-  
-
-      {error && <p style={{ color: "red" }}>{error}</p>} 
-
-  
-
-      <input 
-	  	label="Email: "
-
-        type="email" 
-
-        placeholder="Email" 
-
-        value={email} 
-
-        onChange={(e) => setEmail(e.target.value)} 
-
-        required 
-
+      {/* Email field always shown */}
+      <input
+        type="email"
+        placeholder="Email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        required
+        disabled={stage !== "enter"}
       />
 
-  
+      {/* Stage 2: Password + Confirm Password + Code */}
+      {stage === "verify" && (
+        <>
+	  	 <p style={{ fontSize: "0.9rem", color: "#555" }}>
+		  Password must be at between 8 and 20 characters long and include:
+		  <br />• one uppercase letter
+		  <br />• one number
+		  <br />• one special character
+		 </p>
+         <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
 
-      <input 
-	  	label="Password: "
+          <input
+            type="password"
+            placeholder="Re-enter Password"
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+            required
+          />
 
-        type="password" 
+          <input
+            type="text"
+            placeholder="Verification code"
+            value={code}
+            onChange={(e) => setCode(e.target.value)}
+            required
+          />
+        </>
+      )}
 
-        placeholder="Password" 
+	  <div style={{ marginTop: "10px" }}>
+	    <button type="submit">
+	      {stage === "enter" ? "Send Verification Code" : "Complete Signup"}
+	    </button>
 
-        value={password} 
+	    {stage === "verify" && (
+	      <button
+	        type="button"
+	        onClick={cancelSignup}
+	        style={{ marginLeft: "10px", backgroundColor: "#ccc" }}
+	      >
+	        Cancel
+	      </button>
+	    )}
+	  </div>
+    </form>
+  );
+}
 
-        onChange={(e) => setPassword(e.target.value)} 
-
-        required 
-
-      /> 
-
-  
-
-      <button type="submit">Sign Up</button> 
-
-    </form> 
-
-  ); 
-
-} 
-
-  
-
-export default Signup; 
+export default Signup;

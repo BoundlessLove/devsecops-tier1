@@ -1,6 +1,7 @@
 import { useAuth0 } from "@auth0/auth0-react"; 
 import LoginButton from './LoginButton';
 import Signup from "../pages/signup";
+import "./NavbarAuthControls.css";
 
 function NavbarAuthControls() { 
 	const { isAuthenticated, loginWithPopup, logout} = useAuth0(); 
@@ -14,6 +15,7 @@ function NavbarAuthControls() {
 	};
   return (
 	<>
+	<nav className="navbar">
 		{isAuthenticated ? ( 	
 			<li>
 			<button onClick={() => logout({ returnTo: window.location.origin })}> 
@@ -25,6 +27,8 @@ function NavbarAuthControls() {
 				<li>
 					<Signup />
 				</li>
+				<p>----------------------------</p>
+				<p><h3>Login</h3></p>
 				<li>
 					<button onClick={handleLogin}> 
 					  Login with Popup 
@@ -32,6 +36,7 @@ function NavbarAuthControls() {
 				</li>
 			</>
 			)}
+	</nav>
 		</>
 	);
 }

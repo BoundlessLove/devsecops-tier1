@@ -12,7 +12,7 @@ export default function PurchaseButton() {
 
   return ( 
 
-    <button onClick={() => navigate("/purchase")}> 
+    <button onClick={() => navigate("/home")}> 
 
       Buy Now 
 

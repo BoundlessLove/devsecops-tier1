@@ -28,6 +28,63 @@
   color: #61dafb;
 }
 
+.auth-box {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  max-width: 300px; /* optional */
+}
+
+.auth-box-main {
+  border: 15px solid #ccc;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 100px;
+  background-color: #f9f9f9;
+  max-width: auto; /* optional */
+}
+
+.auth-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40vh; /* adjust as needed */
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header-wrapper { 
+ position: relative; 
+ text-align: center; 
+ margin: 40px 0; 
+} 
+ 
+.header-wrapper h1 { 
+ margin: 0; 
+} 
+ 
+.corner-img { 
+ position: absolute; 
+ top: 0; 
+ width: 200px;   /* adjust as needed */ 
+ height: auto; 
+} 
+ 
+.left-img { 
+ left: 0; 
+} 
+ 
+.right-img { 
+ right: 0; 
+} 
+ 
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
