@@ -301,7 +301,7 @@ function App() {
 						<h3><u>1. CONTEXT</u></h3>
 					    <p><b>A human is a product of its: <p><i>a. Circumstances, and</i></p><p><i>b. Efforts</i></p></b></p><p>Efforts, in particular, are the means to improve our condition - mentally, spiritually, economically, physically and in all possible domains. Then the question arises where the focus of our naturally limited human efforts should lie to bring maximum benefit.</p>
 						<h3><u>2. IMPORTANCE OF BONAFIDE SCRIPTURAL READING</u></h3>
-						<h4>a. The Saint</h4><p> Arguably, the foremost saint in my living memory is the avid spiritual writer Late Swami Ramsukhdas ji (1904-3 July 2005) of Gita Press Gorakhpur Publishers, India (Bhalotia, 2026). The irony is that when the great saint took his last breath (from natural causes), my parents 'Ashwini Kumar Sarna' and 'Renu Sarna' were standing outside his door in the queue, inorder to lay their eyes for the first time on him.</p> <p>🕯️ REST IN PEACE 🕯️</p>
+						<h4>a. The Saint</h4><p> Arguably, the foremost saint in my living memory is the avid spiritual writer Late Swami Ramsukhdas ji (1904-3 July 2005) of Gita Press Gorakhpur Publishers, India (Bhalotia, 2026). The irony is that when the great saint took his last breath (from natural causes), my parents 'Ashwini Kumar Sarna' and 'Renu Sarna' were standing outside his door in the queue, inorder to first time lay their eyes on him.</p> <p>🕯️ REST IN PEACE 🕯️</p>
 						<h4>b. The Learning</h4><p> On December 7, 2023, facebook channel Geeta Press Gorakhpur released a statement from him in which he says:</p>
 						<p>A person once asked me,:</p> <p><i>- What is the minimum prayer one must do?</i></p> I answered, enough that wherever you are, you don't fall from there. So, example, in this life your soul received a human body. It should be ensured that once your soul leaves your body at the time of death, atleast its next destination is another human body. The means to that end is to read from the Gita every day (Geeta Press Gorakhpur, 2023, Dec, 7).
 						</div>
@@ -324,7 +324,7 @@ function App() {
 				<div className="auth-box">
 				  <div className="auth-controls">
 				<li><p>1. Available to Guest: </p><p><button onClick={callApi}>Call API route</button></p></li>
-				<li><p>2. Purchase Option: </p><p><button onClick={callProtectedApi}>Purchase Bible Quotes</button></p></li>
+				<li><p>2. Purchase Option: </p><p><button onClick={callProtectedApi}>Purchase Quotes from Sanatana Dharma Oath book</button></p></li>
 				
 				{isAuthenticated && hasApiAccess === false && (
 					<li>
