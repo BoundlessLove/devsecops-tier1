@@ -1,0 +1,268 @@
+{"level":"info","message":"server started","timestamp":"2026-02-13T00:34:57.014Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-13T00:35:05.493Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-13T00:36:45.457Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-13T00:36:52.655Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-13T00:37:12.551Z"}
+{"level":"info","message":"Protected API: [object Object]","timestamp":"2026-02-13T00:37:14.803Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-13T00:41:24.228Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-13T00:41:34.427Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-13T00:41:38.975Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-13T00:42:27.943Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-13T00:42:33.040Z"}
+{"level":"info","message":"Protected API: [object Object]","timestamp":"2026-02-13T00:42:41.258Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-13T00:43:04.417Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-13T00:43:17.691Z"}
+{"level":"info","message":"Protected API: {\n  \"sub\": \"auth0|68e101f3dc1efef88715ba55\"\n}","timestamp":"2026-02-13T00:43:20.295Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-13T00:44:00.308Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-13T00:44:13.256Z"}
+{"level":"info","message":"Protected API: ","timestamp":"2026-02-13T00:44:15.025Z","userinfo":{"sub":"auth0|68e101f3dc1efef88715ba55"}}
+{"level":"info","message":"server started","timestamp":"2026-02-13T00:44:47.408Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-13T00:44:54.250Z"}
+{"level":"info","message":"Protected API: ","timestamp":"2026-02-13T00:44:56.749Z","userinfo":{"sub":"auth0|68e101f3dc1efef88715ba55"}}
+{"level":"info","message":" / API was called","timestamp":"2026-02-13T00:44:58.995Z"}
+{"level":"info","message":"Protected API: ","timestamp":"2026-02-13T00:45:00.081Z","userinfo":{"sub":"auth0|68e101f3dc1efef88715ba55"}}
+{"level":"info","message":"server started","timestamp":"2026-02-13T00:45:13.999Z"}
+{"level":"info","message":"Protected API: ","timestamp":"2026-02-13T00:45:21.436Z","userinfo":{"sub":"auth0|68e101f3dc1efef88715ba55"}}
+{"level":"info","message":" / API was called","timestamp":"2026-02-13T00:47:17.229Z"}
+{"level":"info","message":"Protected API: ","timestamp":"2026-02-13T00:47:18.642Z","userinfo":{"sub":"auth0|68e101f3dc1efef88715ba55"}}
+{"level":"info","message":" / API was called","timestamp":"2026-02-13T00:50:05.953Z"}
+{"level":"info","message":"Protected API: ","timestamp":"2026-02-13T00:50:07.452Z","userinfo":{"sub":"auth0|68e101f3dc1efef88715ba55"}}
+{"level":"info","message":"Protected API: ","timestamp":"2026-02-13T00:50:18.821Z","userinfo":{"sub":"auth0|68e101f3dc1efef88715ba55"}}
+{"level":"info","message":"Protected API: ","timestamp":"2026-02-13T00:50:26.850Z","userinfo":{"sub":"auth0|68e101f3dc1efef88715ba55"}}
+{"level":"info","message":"server started","timestamp":"2026-02-13T12:20:47.634Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-13T12:20:54.572Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-13T12:21:51.424Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-13T12:24:09.243Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-13T12:26:58.461Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-13T12:47:01.047Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-13T14:19:09.881Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-13T14:50:10.017Z"}
+{"level":"info","message":"Protected API: ","timestamp":"2026-02-13T17:21:55.313Z","userinfo":{"sub":"auth0|68e101f3dc1efef88715ba55"}}
+{"level":"info","message":"server started","timestamp":"2026-02-13T17:23:01.297Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-13T19:32:31.811Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-13T19:33:24.553Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-13T20:26:55.759Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-13T20:28:57.183Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-13T20:29:07.705Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-13T20:32:42.419Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-13T20:36:12.900Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-13T20:37:31.188Z"}
+{"level":"info","message":"Protected API: ","timestamp":"2026-02-13T20:37:33.164Z","userinfo":{"sub":"auth0|68e101f3dc1efef88715ba55"}}
+{"level":"info","message":"server started","timestamp":"2026-02-13T22:23:26.273Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-13T22:56:01.800Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-13T22:59:22.579Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-13T22:59:51.170Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-13T23:08:04.544Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-13T23:40:09.747Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-13T23:42:12.730Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-13T23:50:19.195Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-14T00:11:22.297Z"}
+{"level":"info","message":"Protected API: ","timestamp":"2026-02-14T00:14:49.531Z","userinfo":{"sub":"auth0|68e101f3dc1efef88715ba55"}}
+{"level":"info","message":" / API was called","timestamp":"2026-02-14T00:18:54.442Z"}
+{"level":"info","message":"Protected API: ","timestamp":"2026-02-14T00:20:53.397Z","userinfo":{"sub":"auth0|68e101f3dc1efef88715ba55"}}
+{"level":"info","message":"server started","timestamp":"2026-02-14T00:28:23.454Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-14T01:31:12.363Z"}
+{"level":"info","message":"Protected API: ","timestamp":"2026-02-14T01:31:25.167Z","userinfo":{"sub":"auth0|68e101f3dc1efef88715ba55"}}
+{"level":"info","message":"Protected API: ","timestamp":"2026-02-14T01:46:43.024Z","userinfo":{"sub":"auth0|68e101f3dc1efef88715ba55"}}
+{"level":"info","message":"Protected API: ","timestamp":"2026-02-14T01:48:54.827Z","userinfo":{"sub":"auth0|68e101f3dc1efef88715ba55"}}
+{"level":"info","message":"server started","timestamp":"2026-02-14T02:00:30.062Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-14T02:01:17.903Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-14T02:10:59.267Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-14T02:12:59.453Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-14T02:13:13.165Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-14T02:13:33.035Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-14T02:16:11.250Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-14T02:39:11.284Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-14T02:54:39.560Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-14T02:55:01.760Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-14T02:55:33.194Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-14T02:58:27.895Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-14T03:05:27.167Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-14T03:17:39.338Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-14T03:19:39.668Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-14T03:20:06.434Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-14T03:23:56.109Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-14T03:24:52.057Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-14T03:31:50.817Z"}
+{"aud":["this is a unique identifier","https://dev-5ytq8xlvrdmg2d03.us.auth0.com/userinfo"],"azp":"apombnwMiJWNICbzBmar3rxMt48XOwYr","exp":1771126328,"https://systematicdefence.tech/email":"general@systematicdefence.tech","iat":1771039928,"iss":"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/","level":"info","message":"Full AUTH OBJECT","permissions":["read:token","read:users","view:protected"],"scope":"openid offline_access","sub":"auth0|68e101f3dc1efef88715ba55","timestamp":"2026-02-14T03:32:09.812Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-14T03:35:22.494Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-14T03:36:12.039Z"}
+{"aud":["this is a unique identifier","https://dev-5ytq8xlvrdmg2d03.us.auth0.com/userinfo"],"azp":"apombnwMiJWNICbzBmar3rxMt48XOwYr","exp":1771127046,"https://systematicdefence.tech/email":"general@systematicdefence.tech","iat":1771040646,"iss":"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/","level":"info","message":"Full AUTH OBJECT","permissions":["read:token","read:users","view:protected"],"scope":"openid offline_access","sub":"auth0|68e101f3dc1efef88715ba55","timestamp":"2026-02-14T03:44:08.029Z"}
+{"aud":["this is a unique identifier","https://dev-5ytq8xlvrdmg2d03.us.auth0.com/userinfo"],"azp":"apombnwMiJWNICbzBmar3rxMt48XOwYr","exp":1771127054,"https://systematicdefence.tech/email":"general@systematicdefence.tech","iat":1771040654,"iss":"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/","level":"info","message":"Full AUTH OBJECT","permissions":["read:token","read:users","view:protected"],"scope":"openid offline_access","sub":"auth0|68e101f3dc1efef88715ba55","timestamp":"2026-02-14T03:44:15.670Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-14T03:45:19.654Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-14T03:45:24.007Z"}
+{"aud":["this is a unique identifier","https://dev-5ytq8xlvrdmg2d03.us.auth0.com/userinfo"],"azp":"apombnwMiJWNICbzBmar3rxMt48XOwYr","exp":1771127133,"https://systematicdefence.tech/email":"general@systematicdefence.tech","iat":1771040733,"iss":"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/","level":"info","message":"Full AUTH OBJECT","permissions":["read:token","read:users","view:protected"],"scope":"openid offline_access","sub":"auth0|68e101f3dc1efef88715ba55","timestamp":"2026-02-14T03:45:34.532Z"}
+{"aud":["this is a unique identifier","https://dev-5ytq8xlvrdmg2d03.us.auth0.com/userinfo"],"azp":"apombnwMiJWNICbzBmar3rxMt48XOwYr","exp":1771127163,"https://systematicdefence.tech/email":"general@systematicdefence.tech","iat":1771040763,"iss":"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/","level":"info","message":"Full AUTH OBJECT","permissions":["read:token","read:users","view:protected"],"scope":"openid offline_access","sub":"auth0|68e101f3dc1efef88715ba55","timestamp":"2026-02-14T03:46:04.728Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-14T03:46:11.384Z"}
+{"level":"info","message":"Protected API: ","timestamp":"2026-02-14T03:46:14.166Z","userinfo":{"sub":"auth0|68e101f3dc1efef88715ba55"}}
+{"level":"info","message":"server started","timestamp":"2026-02-14T03:55:01.360Z"}
+{"aud":["this is a unique identifier","https://dev-5ytq8xlvrdmg2d03.us.auth0.com/userinfo"],"azp":"apombnwMiJWNICbzBmar3rxMt48XOwYr","exp":1771127760,"https://systematicdefence.tech/email":"general@systematicdefence.tech","iat":1771041360,"iss":"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/","level":"info","message":"Full AUTH OBJECT","permissions":["read:token","read:users","view:protected"],"scope":"openid offline_access","sub":"auth0|68e101f3dc1efef88715ba55","timestamp":"2026-02-14T03:56:02.352Z"}
+{"aud":["this is a unique identifier","https://dev-5ytq8xlvrdmg2d03.us.auth0.com/userinfo"],"azp":"apombnwMiJWNICbzBmar3rxMt48XOwYr","exp":1771127773,"https://systematicdefence.tech/email":"general@systematicdefence.tech","iat":1771041373,"iss":"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/","level":"info","message":"Full AUTH OBJECT","permissions":["read:token","read:users","view:protected"],"scope":"openid offline_access","sub":"auth0|68e101f3dc1efef88715ba55","timestamp":"2026-02-14T03:56:14.178Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-14T04:06:11.653Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-14T04:06:20.096Z"}
+{"level":"info","message":"PAYLOAD KEYS: []","timestamp":"2026-02-14T04:06:55.736Z"}
+{"level":"info","message":"FULL AUTH OBJECT: {\n  \"https://systematicdefence.tech/email\": \"general@systematicdefence.tech\",\n  \"iss\": \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/\",\n  \"sub\": \"auth0|68e101f3dc1efef88715ba55\",\n  \"aud\": [\n    \"this is a unique identifier\",\n    \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/userinfo\"\n  ],\n  \"iat\": 1771042014,\n  \"exp\": 1771128414,\n  \"scope\": \"openid offline_access\",\n  \"azp\": \"apombnwMiJWNICbzBmar3rxMt48XOwYr\",\n  \"permissions\": [\n    \"read:token\",\n    \"read:users\",\n    \"view:protected\"\n  ]\n}","timestamp":"2026-02-14T04:06:55.736Z"}
+{"level":"info","message":"Email Claim: undefined","timestamp":"2026-02-14T04:06:55.736Z"}
+{"level":"info","message":"PAYLOAD KEYS: []","timestamp":"2026-02-14T04:07:27.699Z"}
+{"level":"info","message":"FULL AUTH OBJECT: {\n  \"https://systematicdefence.tech/email\": \"general@systematicdefence.tech\",\n  \"iss\": \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/\",\n  \"sub\": \"auth0|68e101f3dc1efef88715ba55\",\n  \"aud\": [\n    \"this is a unique identifier\",\n    \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/userinfo\"\n  ],\n  \"iat\": 1771042046,\n  \"exp\": 1771128446,\n  \"scope\": \"openid offline_access\",\n  \"azp\": \"apombnwMiJWNICbzBmar3rxMt48XOwYr\",\n  \"permissions\": [\n    \"read:token\",\n    \"read:users\",\n    \"view:protected\"\n  ]\n}","timestamp":"2026-02-14T04:07:27.700Z"}
+{"level":"info","message":"Email Claim: undefined","timestamp":"2026-02-14T04:07:27.700Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-14T04:16:51.243Z"}
+{"level":"info","message":"AUTH NOW: {\n  \"https://systematicdefence.tech/email\": \"general@systematicdefence.tech\",\n  \"iss\": \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/\",\n  \"sub\": \"auth0|68e101f3dc1efef88715ba55\",\n  \"aud\": [\n    \"this is a unique identifier\",\n    \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/userinfo\"\n  ],\n  \"iat\": 1771042634,\n  \"exp\": 1771129034,\n  \"scope\": \"openid offline_access\",\n  \"azp\": \"apombnwMiJWNICbzBmar3rxMt48XOwYr\",\n  \"permissions\": [\n    \"read:token\",\n    \"read:users\",\n    \"view:protected\"\n  ]\n}","timestamp":"2026-02-14T04:17:15.576Z"}
+{"level":"info","message":"PAYLOAD NOW: undefined","timestamp":"2026-02-14T04:17:15.577Z"}
+{"level":"info","message":"PAYLOAD KEYS: []","timestamp":"2026-02-14T04:17:15.577Z"}
+{"level":"info","message":"Email Claim: undefined","timestamp":"2026-02-14T04:17:15.577Z"}
+{"level":"info","message":"AUTH NOW: {\n  \"https://systematicdefence.tech/email\": \"general@systematicdefence.tech\",\n  \"iss\": \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/\",\n  \"sub\": \"auth0|68e101f3dc1efef88715ba55\",\n  \"aud\": [\n    \"this is a unique identifier\",\n    \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/userinfo\"\n  ],\n  \"iat\": 1771042669,\n  \"exp\": 1771129069,\n  \"scope\": \"openid offline_access\",\n  \"azp\": \"apombnwMiJWNICbzBmar3rxMt48XOwYr\",\n  \"permissions\": [\n    \"read:token\",\n    \"read:users\",\n    \"view:protected\"\n  ]\n}","timestamp":"2026-02-14T04:17:50.171Z"}
+{"level":"info","message":"PAYLOAD NOW: undefined","timestamp":"2026-02-14T04:17:50.171Z"}
+{"level":"info","message":"PAYLOAD KEYS: []","timestamp":"2026-02-14T04:17:50.171Z"}
+{"level":"info","message":"Email Claim: undefined","timestamp":"2026-02-14T04:17:50.171Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-14T04:22:35.991Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-14T04:23:04.282Z"}
+{"level":"info","message":"AUTH NOW: {\n  \"https://systematicdefence.tech/email\": \"general@systematicdefence.tech\",\n  \"iss\": \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/\",\n  \"sub\": \"auth0|68e101f3dc1efef88715ba55\",\n  \"aud\": [\n    \"this is a unique identifier\",\n    \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/userinfo\"\n  ],\n  \"iat\": 1771042996,\n  \"exp\": 1771129396,\n  \"scope\": \"openid offline_access\",\n  \"azp\": \"apombnwMiJWNICbzBmar3rxMt48XOwYr\",\n  \"permissions\": [\n    \"read:token\",\n    \"read:users\",\n    \"view:protected\"\n  ]\n}","timestamp":"2026-02-14T04:23:17.461Z"}
+{"level":"info","message":"Email Claim: general@systematicdefence.tech","timestamp":"2026-02-14T04:23:17.462Z"}
+{"level":"info","message":"AUTH NOW: {\n  \"https://systematicdefence.tech/email\": \"general@systematicdefence.tech\",\n  \"iss\": \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/\",\n  \"sub\": \"auth0|68e101f3dc1efef88715ba55\",\n  \"aud\": [\n    \"this is a unique identifier\",\n    \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/userinfo\"\n  ],\n  \"iat\": 1771043028,\n  \"exp\": 1771129428,\n  \"scope\": \"openid offline_access\",\n  \"azp\": \"apombnwMiJWNICbzBmar3rxMt48XOwYr\",\n  \"permissions\": [\n    \"read:token\",\n    \"read:users\",\n    \"view:protected\"\n  ]\n}","timestamp":"2026-02-14T04:23:49.438Z"}
+{"level":"info","message":"Email Claim: general@systematicdefence.tech","timestamp":"2026-02-14T04:23:49.438Z"}
+{"level":"info","message":"AUTH NOW: {\n  \"https://systematicdefence.tech/email\": \"general@systematicdefence.tech\",\n  \"iss\": \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/\",\n  \"sub\": \"auth0|68e101f3dc1efef88715ba55\",\n  \"aud\": [\n    \"this is a unique identifier\",\n    \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/userinfo\"\n  ],\n  \"iat\": 1771043044,\n  \"exp\": 1771129444,\n  \"scope\": \"openid offline_access\",\n  \"azp\": \"apombnwMiJWNICbzBmar3rxMt48XOwYr\",\n  \"permissions\": [\n    \"read:token\",\n    \"read:users\",\n    \"view:protected\"\n  ]\n}","timestamp":"2026-02-14T04:24:05.736Z"}
+{"level":"info","message":"Email Claim: general@systematicdefence.tech","timestamp":"2026-02-14T04:24:05.736Z"}
+{"level":"info","message":"AUTH NOW: {\n  \"https://systematicdefence.tech/email\": \"general@systematicdefence.tech\",\n  \"iss\": \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/\",\n  \"sub\": \"auth0|68e101f3dc1efef88715ba55\",\n  \"aud\": [\n    \"this is a unique identifier\",\n    \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/userinfo\"\n  ],\n  \"iat\": 1771043209,\n  \"exp\": 1771129609,\n  \"scope\": \"openid offline_access\",\n  \"azp\": \"apombnwMiJWNICbzBmar3rxMt48XOwYr\",\n  \"permissions\": [\n    \"read:token\",\n    \"read:users\",\n    \"view:protected\"\n  ]\n}","timestamp":"2026-02-14T04:26:50.521Z"}
+{"level":"info","message":"Email Claim: general@systematicdefence.tech","timestamp":"2026-02-14T04:26:50.521Z"}
+{"level":"info","message":"AUTH NOW: {\n  \"https://systematicdefence.tech/email\": \"general@systematicdefence.tech\",\n  \"iss\": \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/\",\n  \"sub\": \"auth0|68e101f3dc1efef88715ba55\",\n  \"aud\": [\n    \"this is a unique identifier\",\n    \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/userinfo\"\n  ],\n  \"iat\": 1771043371,\n  \"exp\": 1771129771,\n  \"scope\": \"openid offline_access\",\n  \"azp\": \"apombnwMiJWNICbzBmar3rxMt48XOwYr\",\n  \"permissions\": [\n    \"read:token\",\n    \"read:users\",\n    \"view:protected\"\n  ]\n}","timestamp":"2026-02-14T04:29:33.020Z"}
+{"level":"info","message":"Email Claim: general@systematicdefence.tech","timestamp":"2026-02-14T04:29:33.022Z"}
+{"level":"info","message":"AUTH NOW: {\n  \"https://systematicdefence.tech/email\": \"general@systematicdefence.tech\",\n  \"iss\": \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/\",\n  \"sub\": \"auth0|68e101f3dc1efef88715ba55\",\n  \"aud\": [\n    \"this is a unique identifier\",\n    \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/userinfo\"\n  ],\n  \"iat\": 1771043525,\n  \"exp\": 1771129925,\n  \"scope\": \"openid offline_access\",\n  \"azp\": \"apombnwMiJWNICbzBmar3rxMt48XOwYr\",\n  \"permissions\": [\n    \"read:token\",\n    \"read:users\",\n    \"view:protected\"\n  ]\n}","timestamp":"2026-02-14T04:32:06.459Z"}
+{"level":"info","message":"Email Claim: general@systematicdefence.tech","timestamp":"2026-02-14T04:32:06.460Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-15T00:34:54.511Z"}
+{"level":"info","message":"AUTH NOW: {\n  \"https://systematicdefence.tech/email\": \"general@systematicdefence.tech\",\n  \"iss\": \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/\",\n  \"sub\": \"auth0|68e101f3dc1efef88715ba55\",\n  \"aud\": [\n    \"this is a unique identifier\",\n    \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/userinfo\"\n  ],\n  \"iat\": 1771115741,\n  \"exp\": 1771202141,\n  \"scope\": \"openid offline_access\",\n  \"azp\": \"apombnwMiJWNICbzBmar3rxMt48XOwYr\",\n  \"permissions\": [\n    \"read:token\",\n    \"read:users\",\n    \"view:protected\"\n  ]\n}","timestamp":"2026-02-15T00:35:43.307Z"}
+{"level":"info","message":"Email Claim: general@systematicdefence.tech","timestamp":"2026-02-15T00:35:43.307Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-15T00:35:49.986Z"}
+{"level":"info","message":"Protected API: ","timestamp":"2026-02-15T00:35:52.608Z","userinfo":{"sub":"auth0|68e101f3dc1efef88715ba55"}}
+{"level":"info","message":"Protected API: ","timestamp":"2026-02-15T00:36:08.585Z","userinfo":{"sub":"auth0|68e101f3dc1efef88715ba55"}}
+{"level":"info","message":"AUTH NOW: {\n  \"https://systematicdefence.tech/email\": \"webmaster@systematicdefence.tech\",\n  \"https://www.systematicdefence.tech/stripe_customer_id\": \"cus_TyZkfrByftHUVn\",\n  \"iss\": \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/\",\n  \"sub\": \"auth0|699019c6e1febd863692936b\",\n  \"aud\": [\n    \"this is a unique identifier\",\n    \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/userinfo\"\n  ],\n  \"iat\": 1771115830,\n  \"exp\": 1771202230,\n  \"scope\": \"openid offline_access\",\n  \"azp\": \"apombnwMiJWNICbzBmar3rxMt48XOwYr\",\n  \"permissions\": []\n}","timestamp":"2026-02-15T00:37:11.843Z"}
+{"level":"info","message":"Email Claim: webmaster@systematicdefence.tech","timestamp":"2026-02-15T00:37:11.844Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-15T00:37:15.649Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-15T00:46:32.724Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-15T00:49:18.505Z"}
+{"level":"info","message":"AUTH NOW: {\n  \"https://systematicdefence.tech/email\": \"general@systematicdefence.tech\",\n  \"iss\": \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/\",\n  \"sub\": \"auth0|68e101f3dc1efef88715ba55\",\n  \"aud\": [\n    \"this is a unique identifier\",\n    \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/userinfo\"\n  ],\n  \"iat\": 1771116627,\n  \"exp\": 1771203027,\n  \"scope\": \"openid offline_access\",\n  \"azp\": \"apombnwMiJWNICbzBmar3rxMt48XOwYr\",\n  \"permissions\": [\n    \"read:token\",\n    \"read:users\",\n    \"view:protected\"\n  ]\n}","timestamp":"2026-02-15T00:50:29.918Z"}
+{"level":"info","message":"Email Claim: general@systematicdefence.tech","timestamp":"2026-02-15T00:50:29.918Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-15T00:50:39.693Z"}
+{"level":"info","message":"Protected API: ","timestamp":"2026-02-15T00:51:07.703Z","userinfo":{"sub":"auth0|68e101f3dc1efef88715ba55"}}
+{"level":"info","message":"AUTH NOW: {\n  \"https://systematicdefence.tech/email\": \"ashwinisarna@hotmail.com\",\n  \"https://www.systematicdefence.tech/stripe_customer_id\": \"cus_TyrNX65pAF34JP\",\n  \"iss\": \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/\",\n  \"sub\": \"auth0|699119a1de4d90b5c7ae9aa5\",\n  \"aud\": [\n    \"this is a unique identifier\",\n    \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/userinfo\"\n  ],\n  \"iat\": 1771117320,\n  \"exp\": 1771203720,\n  \"scope\": \"openid offline_access\",\n  \"azp\": \"apombnwMiJWNICbzBmar3rxMt48XOwYr\",\n  \"permissions\": []\n}","timestamp":"2026-02-15T01:02:02.848Z"}
+{"level":"info","message":"Email Claim: ashwinisarna@hotmail.com","timestamp":"2026-02-15T01:02:02.848Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-15T01:03:11.864Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-15T01:05:36.331Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-15T16:07:46.574Z"}
+{"level":"info","message":"AUTH NOW: {\n  \"https://systematicdefence.tech/email\": \"ashwinisarna@hotmail.com\",\n  \"https://www.systematicdefence.tech/stripe_customer_id\": \"cus_TyrNX65pAF34JP\",\n  \"iss\": \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/\",\n  \"sub\": \"auth0|699119a1de4d90b5c7ae9aa5\",\n  \"aud\": [\n    \"this is a unique identifier\",\n    \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/userinfo\"\n  ],\n  \"iat\": 1771171685,\n  \"exp\": 1771258085,\n  \"scope\": \"openid offline_access\",\n  \"azp\": \"apombnwMiJWNICbzBmar3rxMt48XOwYr\",\n  \"permissions\": []\n}","timestamp":"2026-02-15T16:08:08.641Z"}
+{"level":"info","message":"Email Claim: ashwinisarna@hotmail.com","timestamp":"2026-02-15T16:08:08.641Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-15T16:10:22.237Z"}
+{"level":"info","message":"AUTH NOW: {\n  \"https://systematicdefence.tech/email\": \"general@systematicdefence.tech\",\n  \"iss\": \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/\",\n  \"sub\": \"auth0|68e101f3dc1efef88715ba55\",\n  \"aud\": [\n    \"this is a unique identifier\",\n    \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/userinfo\"\n  ],\n  \"iat\": 1771171832,\n  \"exp\": 1771258232,\n  \"scope\": \"openid offline_access\",\n  \"azp\": \"apombnwMiJWNICbzBmar3rxMt48XOwYr\",\n  \"permissions\": [\n    \"read:token\",\n    \"read:users\",\n    \"view:protected\"\n  ]\n}","timestamp":"2026-02-15T16:10:34.967Z"}
+{"level":"info","message":"Email Claim: general@systematicdefence.tech","timestamp":"2026-02-15T16:10:34.968Z"}
+{"level":"info","message":"Protected API: ","timestamp":"2026-02-15T16:21:42.126Z","userinfo":{"sub":"auth0|68e101f3dc1efef88715ba55"}}
+{"level":"info","message":"AUTH NOW: {\n  \"https://systematicdefence.tech/email\": \"general@systematicdefence.tech\",\n  \"iss\": \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/\",\n  \"sub\": \"auth0|68e101f3dc1efef88715ba55\",\n  \"aud\": [\n    \"this is a unique identifier\",\n    \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/userinfo\"\n  ],\n  \"iat\": 1771176372,\n  \"exp\": 1771262772,\n  \"scope\": \"openid offline_access\",\n  \"azp\": \"apombnwMiJWNICbzBmar3rxMt48XOwYr\",\n  \"permissions\": [\n    \"read:token\",\n    \"read:users\",\n    \"view:protected\"\n  ]\n}","timestamp":"2026-02-15T17:26:15.570Z"}
+{"level":"info","message":"Email Claim: general@systematicdefence.tech","timestamp":"2026-02-15T17:26:15.570Z"}
+{"level":"info","message":"Protected API: ","timestamp":"2026-02-15T17:26:19.618Z","userinfo":{"sub":"auth0|68e101f3dc1efef88715ba55"}}
+{"level":"info","message":" / API was called","timestamp":"2026-02-15T17:31:29.863Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-15T17:33:19.943Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-15T17:34:31.836Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-19T21:25:29.512Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-19T21:25:40.981Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-19T22:57:34.331Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-19T22:59:25.016Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-19T23:12:27.891Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-19T23:14:20.124Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-19T23:15:36.699Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-19T23:26:22.649Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-19T23:32:38.540Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-19T23:32:46.896Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-19T23:43:08.386Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-19T23:48:48.616Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-19T23:49:22.434Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-19T23:49:44.469Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-20T00:05:31.392Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-20T00:06:03.146Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-20T00:19:23.724Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-20T00:19:55.213Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-20T00:19:57.416Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-20T00:20:10.374Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-20T00:20:31.234Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-20T00:20:55.214Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-20T00:21:19.720Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-20T00:28:24.128Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-20T00:28:58.634Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-20T00:29:46.079Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-20T00:29:51.922Z"}
+{"level":"info","message":"AUTH NOW: {\n  \"https://systematicdefence.tech/email\": \"general@systematicdefence.tech\",\n  \"iss\": \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/\",\n  \"sub\": \"auth0|68e101f3dc1efef88715ba55\",\n  \"aud\": [\n    \"this is a unique identifier\",\n    \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/userinfo\"\n  ],\n  \"iat\": 1771548018,\n  \"exp\": 1771634418,\n  \"scope\": \"openid offline_access\",\n  \"azp\": \"apombnwMiJWNICbzBmar3rxMt48XOwYr\",\n  \"permissions\": [\n    \"read:token\",\n    \"read:users\",\n    \"view:protected\"\n  ]\n}","timestamp":"2026-02-20T00:40:25.641Z"}
+{"level":"info","message":"Email Claim: general@systematicdefence.tech","timestamp":"2026-02-20T00:40:25.641Z"}
+{"level":"info","message":"AUTH NOW: {\n  \"https://systematicdefence.tech/email\": \"general@systematicdefence.tech\",\n  \"iss\": \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/\",\n  \"sub\": \"auth0|68e101f3dc1efef88715ba55\",\n  \"aud\": [\n    \"this is a unique identifier\",\n    \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/userinfo\"\n  ],\n  \"iat\": 1771548026,\n  \"exp\": 1771634426,\n  \"scope\": \"openid offline_access\",\n  \"azp\": \"apombnwMiJWNICbzBmar3rxMt48XOwYr\",\n  \"permissions\": [\n    \"read:token\",\n    \"read:users\",\n    \"view:protected\"\n  ]\n}","timestamp":"2026-02-20T00:40:33.927Z"}
+{"level":"info","message":"Email Claim: general@systematicdefence.tech","timestamp":"2026-02-20T00:40:33.927Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-20T00:40:45.870Z"}
+{"level":"info","message":"AUTH NOW: {\n  \"https://systematicdefence.tech/email\": \"general@systematicdefence.tech\",\n  \"iss\": \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/\",\n  \"sub\": \"auth0|68e101f3dc1efef88715ba55\",\n  \"aud\": [\n    \"this is a unique identifier\",\n    \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/userinfo\"\n  ],\n  \"iat\": 1771548059,\n  \"exp\": 1771634459,\n  \"scope\": \"openid offline_access\",\n  \"azp\": \"apombnwMiJWNICbzBmar3rxMt48XOwYr\",\n  \"permissions\": [\n    \"read:token\",\n    \"read:users\",\n    \"view:protected\"\n  ]\n}","timestamp":"2026-02-20T00:41:06.203Z"}
+{"level":"info","message":"Email Claim: general@systematicdefence.tech","timestamp":"2026-02-20T00:41:06.203Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-20T00:41:14.944Z"}
+{"level":"info","message":"Protected API: ","timestamp":"2026-02-20T00:41:16.969Z","userinfo":{"sub":"auth0|68e101f3dc1efef88715ba55"}}
+{"level":"info","message":" / API was called","timestamp":"2026-02-20T00:41:23.811Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-20T01:21:01.055Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-20T01:21:24.793Z"}
+{"level":"info","message":"AUTH NOW: {\n  \"https://systematicdefence.tech/email\": \"general@systematicdefence.tech\",\n  \"iss\": \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/\",\n  \"sub\": \"auth0|68e101f3dc1efef88715ba55\",\n  \"aud\": [\n    \"this is a unique identifier\",\n    \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/userinfo\"\n  ],\n  \"iat\": 1771550490,\n  \"exp\": 1771636890,\n  \"scope\": \"openid offline_access\",\n  \"azp\": \"apombnwMiJWNICbzBmar3rxMt48XOwYr\",\n  \"permissions\": [\n    \"read:token\",\n    \"read:users\",\n    \"view:protected\"\n  ]\n}","timestamp":"2026-02-20T01:21:37.644Z"}
+{"level":"info","message":"Email Claim: general@systematicdefence.tech","timestamp":"2026-02-20T01:21:37.644Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-20T01:21:47.109Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-20T01:23:57.353Z"}
+{"level":"info","message":"AUTH NOW: {\n  \"https://systematicdefence.tech/email\": \"general@systematicdefence.tech\",\n  \"iss\": \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/\",\n  \"sub\": \"auth0|68e101f3dc1efef88715ba55\",\n  \"aud\": [\n    \"this is a unique identifier\",\n    \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/userinfo\"\n  ],\n  \"iat\": 1771550642,\n  \"exp\": 1771637042,\n  \"scope\": \"openid offline_access\",\n  \"azp\": \"apombnwMiJWNICbzBmar3rxMt48XOwYr\",\n  \"permissions\": [\n    \"read:token\",\n    \"read:users\",\n    \"view:protected\"\n  ]\n}","timestamp":"2026-02-20T01:24:09.451Z"}
+{"level":"info","message":"Email Claim: general@systematicdefence.tech","timestamp":"2026-02-20T01:24:09.452Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-20T01:30:15.261Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-20T01:35:56.524Z"}
+{"level":"info","message":"AUTH NOW: {\n  \"https://systematicdefence.tech/email\": \"general@systematicdefence.tech\",\n  \"iss\": \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/\",\n  \"sub\": \"auth0|68e101f3dc1efef88715ba55\",\n  \"aud\": [\n    \"this is a unique identifier\",\n    \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/userinfo\"\n  ],\n  \"iat\": 1771551355,\n  \"exp\": 1771637755,\n  \"scope\": \"openid offline_access\",\n  \"azp\": \"apombnwMiJWNICbzBmar3rxMt48XOwYr\",\n  \"permissions\": [\n    \"read:token\",\n    \"read:users\",\n    \"view:protected\"\n  ]\n}","timestamp":"2026-02-20T01:36:03.136Z"}
+{"level":"info","message":"Email Claim: general@systematicdefence.tech","timestamp":"2026-02-20T01:36:03.136Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-20T01:36:04.972Z"}
+{"level":"info","message":"server started","timestamp":"2026-02-20T09:30:19.963Z"}
+{"level":"info","message":"AUTH NOW: {\n  \"https://systematicdefence.tech/email\": \"general@systematicdefence.tech\",\n  \"iss\": \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/\",\n  \"sub\": \"auth0|68e101f3dc1efef88715ba55\",\n  \"aud\": [\n    \"this is a unique identifier\",\n    \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/userinfo\"\n  ],\n  \"iat\": 1771579821,\n  \"exp\": 1771666221,\n  \"scope\": \"openid offline_access\",\n  \"azp\": \"apombnwMiJWNICbzBmar3rxMt48XOwYr\",\n  \"permissions\": [\n    \"read:token\",\n    \"read:users\",\n    \"view:protected\"\n  ]\n}","timestamp":"2026-02-20T09:30:29.229Z"}
+{"level":"info","message":"Email Claim: general@systematicdefence.tech","timestamp":"2026-02-20T09:30:29.229Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-20T12:20:12.733Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-20T12:28:24.388Z"}
+{"level":"info","message":"AUTH NOW: {\n  \"https://systematicdefence.tech/email\": \"theman@systematicdefence.tech\",\n  \"https://www.systematicdefence.tech/stripe_customer_id\": \"cus_TyI2O5JgvpWgLC\",\n  \"iss\": \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/\",\n  \"sub\": \"auth0|69985cc7e4a947e5d09dcbfd\",\n  \"aud\": [\n    \"this is a unique identifier\",\n    \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/userinfo\"\n  ],\n  \"iat\": 1771592926,\n  \"exp\": 1771679326,\n  \"scope\": \"openid offline_access\",\n  \"azp\": \"apombnwMiJWNICbzBmar3rxMt48XOwYr\",\n  \"permissions\": []\n}","timestamp":"2026-02-20T13:08:54.279Z"}
+{"level":"info","message":"Email Claim: theman@systematicdefence.tech","timestamp":"2026-02-20T13:08:54.280Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-20T13:08:59.933Z"}
+{"level":"info","message":"AUTH NOW: {\n  \"https://systematicdefence.tech/email\": \"theman@systematicdefence.tech\",\n  \"https://www.systematicdefence.tech/stripe_customer_id\": \"cus_TyI2O5JgvpWgLC\",\n  \"iss\": \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/\",\n  \"sub\": \"auth0|69985cc7e4a947e5d09dcbfd\",\n  \"aud\": [\n    \"this is a unique identifier\",\n    \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/userinfo\"\n  ],\n  \"iat\": 1771593856,\n  \"exp\": 1771680256,\n  \"scope\": \"openid offline_access\",\n  \"azp\": \"apombnwMiJWNICbzBmar3rxMt48XOwYr\",\n  \"permissions\": []\n}","timestamp":"2026-02-20T13:24:24.203Z"}
+{"level":"info","message":"Email Claim: theman@systematicdefence.tech","timestamp":"2026-02-20T13:24:24.204Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-20T13:24:26.983Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-20T13:24:35.059Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-20T13:24:37.500Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-20T13:24:42.549Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-20T13:28:33.548Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-20T13:57:20.311Z"}
+{"level":"info","message":"AUTH NOW: {\n  \"https://systematicdefence.tech/email\": \"general@systematicdefence.tech\",\n  \"iss\": \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/\",\n  \"sub\": \"auth0|68e101f3dc1efef88715ba55\",\n  \"aud\": [\n    \"this is a unique identifier\",\n    \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/userinfo\"\n  ],\n  \"iat\": 1771595957,\n  \"exp\": 1771682357,\n  \"scope\": \"openid offline_access\",\n  \"azp\": \"apombnwMiJWNICbzBmar3rxMt48XOwYr\",\n  \"permissions\": [\n    \"read:token\",\n    \"read:users\",\n    \"view:protected\"\n  ]\n}","timestamp":"2026-02-20T13:59:24.492Z"}
+{"level":"info","message":"Email Claim: general@systematicdefence.tech","timestamp":"2026-02-20T13:59:24.492Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-20T13:59:36.911Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-20T14:02:40.075Z"}
+{"level":"info","message":"AUTH NOW: {\n  \"https://systematicdefence.tech/email\": \"general@systematicdefence.tech\",\n  \"iss\": \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/\",\n  \"sub\": \"auth0|68e101f3dc1efef88715ba55\",\n  \"aud\": [\n    \"this is a unique identifier\",\n    \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/userinfo\"\n  ],\n  \"iat\": 1771596165,\n  \"exp\": 1771682565,\n  \"scope\": \"openid offline_access\",\n  \"azp\": \"apombnwMiJWNICbzBmar3rxMt48XOwYr\",\n  \"permissions\": [\n    \"read:token\",\n    \"read:users\",\n    \"view:protected\"\n  ]\n}","timestamp":"2026-02-20T14:02:52.321Z"}
+{"level":"info","message":"Email Claim: general@systematicdefence.tech","timestamp":"2026-02-20T14:02:52.321Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-20T14:02:58.466Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-20T14:05:24.235Z"}
+{"level":"info","message":" / API was called","timestamp":"2026-02-20T14:23:23.205Z"}
+{"level":"info","message":"AUTH NOW: {\n  \"https://systematicdefence.tech/email\": \"general@systematicdefence.tech\",\n  \"iss\": \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/\",\n  \"sub\": \"auth0|68e101f3dc1efef88715ba55\",\n  \"aud\": [\n    \"this is a unique identifier\",\n    \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/userinfo\"\n  ],\n  \"iat\": 1771598520,\n  \"exp\": 1771684920,\n  \"scope\": \"openid offline_access\",\n  \"azp\": \"apombnwMiJWNICbzBmar3rxMt48XOwYr\",\n  \"permissions\": [\n    \"read:token\",\n    \"read:users\",\n    \"view:protected\"\n  ]\n}","timestamp":"2026-02-20T14:42:08.075Z"}
+{"level":"info","message":"Email Claim: general@systematicdefence.tech","timestamp":"2026-02-20T14:42:08.075Z"}
+{"level":"info","message":"AUTH NOW: {\n  \"https://systematicdefence.tech/email\": \"theman@systematicdefence.tech\",\n  \"https://www.systematicdefence.tech/stripe_customer_id\": \"cus_TyI2O5JgvpWgLC\",\n  \"iss\": \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/\",\n  \"sub\": \"auth0|69985cc7e4a947e5d09dcbfd\",\n  \"aud\": [\n    \"this is a unique identifier\",\n    \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/userinfo\"\n  ],\n  \"iat\": 1771598835,\n  \"exp\": 1771685235,\n  \"scope\": \"openid offline_access\",\n  \"azp\": \"apombnwMiJWNICbzBmar3rxMt48XOwYr\",\n  \"permissions\": []\n}","timestamp":"2026-02-20T14:47:22.685Z"}
+{"level":"info","message":"Email Claim: theman@systematicdefence.tech","timestamp":"2026-02-20T14:47:22.686Z"}
+{"level":"info","message":"AUTH NOW: {\n  \"https://systematicdefence.tech/email\": \"theman@systematicdefence.tech\",\n  \"https://www.systematicdefence.tech/stripe_customer_id\": \"cus_TyI2O5JgvpWgLC\",\n  \"iss\": \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/\",\n  \"sub\": \"auth0|69985cc7e4a947e5d09dcbfd\",\n  \"aud\": [\n    \"this is a unique identifier\",\n    \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/userinfo\"\n  ],\n  \"iat\": 1771598915,\n  \"exp\": 1771685315,\n  \"scope\": \"openid offline_access\",\n  \"azp\": \"apombnwMiJWNICbzBmar3rxMt48XOwYr\",\n  \"permissions\": []\n}","timestamp":"2026-02-20T14:48:43.139Z"}
+{"level":"info","message":"Email Claim: theman@systematicdefence.tech","timestamp":"2026-02-20T14:48:43.139Z"}
+{"level":"info","message":"AUTH NOW: {\n  \"https://systematicdefence.tech/email\": \"theman@systematicdefence.tech\",\n  \"https://www.systematicdefence.tech/stripe_customer_id\": \"cus_TyI2O5JgvpWgLC\",\n  \"iss\": \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/\",\n  \"sub\": \"auth0|69985cc7e4a947e5d09dcbfd\",\n  \"aud\": [\n    \"this is a unique identifier\",\n    \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/userinfo\"\n  ],\n  \"iat\": 1771598974,\n  \"exp\": 1771685374,\n  \"scope\": \"openid offline_access\",\n  \"azp\": \"apombnwMiJWNICbzBmar3rxMt48XOwYr\",\n  \"permissions\": []\n}","timestamp":"2026-02-20T14:49:41.374Z"}
+{"level":"info","message":"Email Claim: theman@systematicdefence.tech","timestamp":"2026-02-20T14:49:41.374Z"}
+{"level":"info","message":"AUTH NOW: {\n  \"https://systematicdefence.tech/email\": \"theman@systematicdefence.tech\",\n  \"https://www.systematicdefence.tech/stripe_customer_id\": \"cus_TyI2O5JgvpWgLC\",\n  \"iss\": \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/\",\n  \"sub\": \"auth0|69985cc7e4a947e5d09dcbfd\",\n  \"aud\": [\n    \"this is a unique identifier\",\n    \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/userinfo\"\n  ],\n  \"iat\": 1771599328,\n  \"exp\": 1771685728,\n  \"scope\": \"openid offline_access\",\n  \"azp\": \"apombnwMiJWNICbzBmar3rxMt48XOwYr\",\n  \"permissions\": []\n}","timestamp":"2026-02-20T14:55:36.028Z"}
+{"level":"info","message":"Email Claim: theman@systematicdefence.tech","timestamp":"2026-02-20T14:55:36.028Z"}
+{"level":"info","message":"AUTH NOW: {\n  \"https://systematicdefence.tech/email\": \"theman@systematicdefence.tech\",\n  \"https://www.systematicdefence.tech/stripe_customer_id\": \"cus_TyI2O5JgvpWgLC\",\n  \"iss\": \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/\",\n  \"sub\": \"auth0|69985cc7e4a947e5d09dcbfd\",\n  \"aud\": [\n    \"this is a unique identifier\",\n    \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/userinfo\"\n  ],\n  \"iat\": 1771599845,\n  \"exp\": 1771686245,\n  \"scope\": \"openid offline_access\",\n  \"azp\": \"apombnwMiJWNICbzBmar3rxMt48XOwYr\",\n  \"permissions\": []\n}","timestamp":"2026-02-20T15:04:12.940Z"}
+{"level":"info","message":"Email Claim: theman@systematicdefence.tech","timestamp":"2026-02-20T15:04:12.941Z"}
+{"level":"info","message":"AUTH NOW: {\n  \"https://systematicdefence.tech/email\": \"theman@systematicdefence.tech\",\n  \"https://www.systematicdefence.tech/stripe_customer_id\": \"cus_TyI2O5JgvpWgLC\",\n  \"iss\": \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/\",\n  \"sub\": \"auth0|69985cc7e4a947e5d09dcbfd\",\n  \"aud\": [\n    \"this is a unique identifier\",\n    \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/userinfo\"\n  ],\n  \"iat\": 1771600316,\n  \"exp\": 1771686716,\n  \"scope\": \"openid offline_access\",\n  \"azp\": \"apombnwMiJWNICbzBmar3rxMt48XOwYr\",\n  \"permissions\": []\n}","timestamp":"2026-02-20T15:12:03.654Z"}
+{"level":"info","message":"Email Claim: theman@systematicdefence.tech","timestamp":"2026-02-20T15:12:03.654Z"}
+{"level":"info","message":"AUTH NOW: {\n  \"https://systematicdefence.tech/email\": \"theman@systematicdefence.tech\",\n  \"https://www.systematicdefence.tech/stripe_customer_id\": \"cus_TyI2O5JgvpWgLC\",\n  \"iss\": \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/\",\n  \"sub\": \"auth0|69985cc7e4a947e5d09dcbfd\",\n  \"aud\": [\n    \"this is a unique identifier\",\n    \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/userinfo\"\n  ],\n  \"iat\": 1771600621,\n  \"exp\": 1771687021,\n  \"scope\": \"openid offline_access\",\n  \"azp\": \"apombnwMiJWNICbzBmar3rxMt48XOwYr\",\n  \"permissions\": []\n}","timestamp":"2026-02-20T15:17:08.244Z"}
+{"level":"info","message":"Email Claim: theman@systematicdefence.tech","timestamp":"2026-02-20T15:17:08.245Z"}
+{"level":"info","message":"AUTH NOW: {\n  \"https://systematicdefence.tech/email\": \"theman@systematicdefence.tech\",\n  \"https://www.systematicdefence.tech/stripe_customer_id\": \"cus_TyI2O5JgvpWgLC\",\n  \"iss\": \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/\",\n  \"sub\": \"auth0|69985cc7e4a947e5d09dcbfd\",\n  \"aud\": [\n    \"this is a unique identifier\",\n    \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/userinfo\"\n  ],\n  \"iat\": 1771600752,\n  \"exp\": 1771687152,\n  \"scope\": \"openid offline_access\",\n  \"azp\": \"apombnwMiJWNICbzBmar3rxMt48XOwYr\",\n  \"permissions\": []\n}","timestamp":"2026-02-20T15:19:19.530Z"}
+{"level":"info","message":"Email Claim: theman@systematicdefence.tech","timestamp":"2026-02-20T15:19:19.530Z"}
+{"level":"info","message":"AUTH NOW: {\n  \"https://systematicdefence.tech/email\": \"theman@systematicdefence.tech\",\n  \"https://www.systematicdefence.tech/stripe_customer_id\": \"cus_TyI2O5JgvpWgLC\",\n  \"iss\": \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/\",\n  \"sub\": \"auth0|69985cc7e4a947e5d09dcbfd\",\n  \"aud\": [\n    \"this is a unique identifier\",\n    \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/userinfo\"\n  ],\n  \"iat\": 1771600798,\n  \"exp\": 1771687198,\n  \"scope\": \"openid offline_access\",\n  \"azp\": \"apombnwMiJWNICbzBmar3rxMt48XOwYr\",\n  \"permissions\": []\n}","timestamp":"2026-02-20T15:20:05.879Z"}
+{"level":"info","message":"Email Claim: theman@systematicdefence.tech","timestamp":"2026-02-20T15:20:05.879Z"}
+{"level":"info","message":"AUTH NOW: {\n  \"https://systematicdefence.tech/email\": \"theman@systematicdefence.tech\",\n  \"https://www.systematicdefence.tech/stripe_customer_id\": \"cus_TyI2O5JgvpWgLC\",\n  \"iss\": \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/\",\n  \"sub\": \"auth0|69985cc7e4a947e5d09dcbfd\",\n  \"aud\": [\n    \"this is a unique identifier\",\n    \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/userinfo\"\n  ],\n  \"iat\": 1771600874,\n  \"exp\": 1771687274,\n  \"scope\": \"openid offline_access\",\n  \"azp\": \"apombnwMiJWNICbzBmar3rxMt48XOwYr\",\n  \"permissions\": []\n}","timestamp":"2026-02-20T15:21:21.501Z"}
+{"level":"info","message":"Email Claim: theman@systematicdefence.tech","timestamp":"2026-02-20T15:21:21.501Z"}
+{"level":"info","message":"AUTH NOW: {\n  \"https://systematicdefence.tech/email\": \"theman@systematicdefence.tech\",\n  \"https://www.systematicdefence.tech/stripe_customer_id\": \"cus_TyI2O5JgvpWgLC\",\n  \"iss\": \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/\",\n  \"sub\": \"auth0|69985cc7e4a947e5d09dcbfd\",\n  \"aud\": [\n    \"this is a unique identifier\",\n    \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/userinfo\"\n  ],\n  \"iat\": 1771600932,\n  \"exp\": 1771687332,\n  \"scope\": \"openid offline_access\",\n  \"azp\": \"apombnwMiJWNICbzBmar3rxMt48XOwYr\",\n  \"permissions\": []\n}","timestamp":"2026-02-20T15:22:19.883Z"}
+{"level":"info","message":"Email Claim: theman@systematicdefence.tech","timestamp":"2026-02-20T15:22:19.883Z"}
+{"level":"info","message":"AUTH NOW: {\n  \"https://systematicdefence.tech/email\": \"theman@systematicdefence.tech\",\n  \"https://www.systematicdefence.tech/stripe_customer_id\": \"cus_TyI2O5JgvpWgLC\",\n  \"iss\": \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/\",\n  \"sub\": \"auth0|69985cc7e4a947e5d09dcbfd\",\n  \"aud\": [\n    \"this is a unique identifier\",\n    \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/userinfo\"\n  ],\n  \"iat\": 1771601093,\n  \"exp\": 1771687493,\n  \"scope\": \"openid offline_access\",\n  \"azp\": \"apombnwMiJWNICbzBmar3rxMt48XOwYr\",\n  \"permissions\": []\n}","timestamp":"2026-02-20T15:25:00.956Z"}
+{"level":"info","message":"Email Claim: theman@systematicdefence.tech","timestamp":"2026-02-20T15:25:00.956Z"}
+{"level":"info","message":"AUTH NOW: {\n  \"https://systematicdefence.tech/email\": \"theman@systematicdefence.tech\",\n  \"https://www.systematicdefence.tech/stripe_customer_id\": \"cus_TyI2O5JgvpWgLC\",\n  \"iss\": \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/\",\n  \"sub\": \"auth0|69985cc7e4a947e5d09dcbfd\",\n  \"aud\": [\n    \"this is a unique identifier\",\n    \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/userinfo\"\n  ],\n  \"iat\": 1771601164,\n  \"exp\": 1771687564,\n  \"scope\": \"openid offline_access\",\n  \"azp\": \"apombnwMiJWNICbzBmar3rxMt48XOwYr\",\n  \"permissions\": []\n}","timestamp":"2026-02-20T15:26:11.387Z"}
+{"level":"info","message":"Email Claim: theman@systematicdefence.tech","timestamp":"2026-02-20T15:26:11.388Z"}
+{"level":"info","message":"AUTH NOW: {\n  \"https://systematicdefence.tech/email\": \"theman@systematicdefence.tech\",\n  \"https://www.systematicdefence.tech/stripe_customer_id\": \"cus_TyI2O5JgvpWgLC\",\n  \"iss\": \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/\",\n  \"sub\": \"auth0|69985cc7e4a947e5d09dcbfd\",\n  \"aud\": [\n    \"this is a unique identifier\",\n    \"https://dev-5ytq8xlvrdmg2d03.us.auth0.com/userinfo\"\n  ],\n  \"iat\": 1771601204,\n  \"exp\": 1771687604,\n  \"scope\": \"openid offline_access\",\n  \"azp\": \"apombnwMiJWNICbzBmar3rxMt48XOwYr\",\n  \"permissions\": []\n}","timestamp":"2026-02-20T15:26:51.725Z"}
+{"level":"info","message":"Email Claim: theman@systematicdefence.tech","timestamp":"2026-02-20T15:26:51.726Z"}
