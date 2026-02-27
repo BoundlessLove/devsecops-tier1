@@ -14,7 +14,7 @@ import NavbarAuthControls from "./Components/NavbarAuthControls";
 import proof from "./assets/Proof.jpg"
 import dove from "./assets/dove.jpg"
 import ProtectedRoute from "./Components/ProtectedRoute";
-
+//import logger from "./logger.js";
 
 function App() {
 	// create hook
@@ -95,6 +95,8 @@ function App() {
 	function callApi() {
 	  axios.get(devServer)
 	    .then(response => {
+//		  logger.info(devServer);
+		  console.log(devServer);
 	      setOutput(response.data);
 	      setError(null);
 	    })
