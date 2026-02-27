@@ -37,6 +37,7 @@ function App() {
 	
 	const devClient = process.env.REACT_APP_DEV_CLIENT;
 	const devServer = process.env.REACT_APP_DEV_SERVER;
+
 	
 /*	const fetchData = (endpoint) => { 
 
