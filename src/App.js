@@ -11,8 +11,9 @@ import PurchaseButton from './Components/PurchaseButton';
 import PurchasePage from './pages/purchase';
 import HomePage from './pages/HomePage';
 import NavbarAuthControls from "./Components/NavbarAuthControls";
-import proof from "./assets/Proof.jpg"
-import dove from "./assets/dove.jpg"
+import proof from "./assets/Proof.jpg";
+import dove from "./assets/dove.jpg";
+import construction from "./assets/UnderDevelopment_FreePik.jpg";
 import ProtectedRoute from "./Components/ProtectedRoute";
 //import logger from "./logger.js";
 
@@ -93,7 +94,7 @@ function App() {
 //			.catch(error => console.log(error.message))
 	}*/
 	
-	function callApi() {
+/*	function callApi() {
 	  axios.get(devServer)
 	    .then(response => {
 //		  logger.info(devServer);
@@ -105,6 +106,26 @@ function App() {
 	      setOutput(null);
 	      setError(error?.message || "Unknown error occurred.");
 	    });
+	}*/
+
+	function callApi() { 
+	 
+	 axios.get(devServer, { 
+	   headers: { 
+	     "x-api-key": process.env.REACT_APP_API_KEY, 
+//	     "Authorization": `Bearer ${token}`   // Only include if calling protected routes 
+	   } 
+	 }) 
+	 .then(response => { 
+	   console.log(devServer); 
+	   setOutput(response.data); 
+	   setError(null); 
+	 }) 
+	 .catch(error => { 
+	   setOutput(null); 
+	   setError(error?.message || "Unknown error occurred."); 
+	 }); 
+	 
 	}
 	
 	async function callTopSecretApi(){
@@ -313,6 +334,10 @@ function App() {
 					
 
 				<h2>ii. Why charge for sharing God's word?</h2><p>This site is a one stop shop for selling quotations from the 'Good News Bible' akin Gita, as per Section 2b) above. Nowadays, nearly all 'current affairs' media outlets such as the Washington Post and the New Zealand Herald require a subscription to access their media content. This is ethical and a mark of quality in 2026, as they run a business which employs staff, and staff need to be paid.</p> 
+			</div>
+			<div className="auth-box-main">
+				<img src={construction} alt="under construction" /> 
+				<p style={{ color: "red"}} ><b>AT THIS STAGE, ONLY GUEST LEVEL ACCESS IF FUNCTIONAL - 'Call API Route' button.</b></p>
 			</div>
 			<h3>User: {email ?? "Not Logged in"} </h3>
 			<div className="auth-wrapper">
