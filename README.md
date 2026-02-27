@@ -96,6 +96,9 @@ Test SSH connection using:
 ##### Version 0.13
 20 Feb 2026 14:38: Fixed api access issues from client in dev and production
 
+##### Version 1.0
+28 Feb 2026 09:06: First official release to Production, with only Guest level access working.
+
 
 ##APPENDIX 1.0##
 You’re absolutely right about the root cause: FastComet is serving your built React app, so pulling new code from GitHub won’t change anything until you run: 
