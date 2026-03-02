@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import { runRecaptcha } from "../utils/runRecaptcha";
 
 function Signup() {
   const [email, setEmail] = useState("");
@@ -19,6 +20,12 @@ function Signup() {
   const sendCode = async (e) => {
     e.preventDefault();
     setError("");
+	const token = await runRecaptcha("signup");
+
+	if (!token) {
+	  setError("CAPTCHA verification failed. Try again.");
+	  return;
+	}
 
     try {
       await axios.post(`${process.env.REACT_APP_DEV_EMAIL_API_SERVER}/send-code`, { email });
