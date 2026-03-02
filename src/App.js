@@ -308,12 +308,6 @@ function App() {
 			})();
 		}
 	}, [isAuthenticated]);
-	useEffect(() => {
-		const script = document.createElement("script");
-		script.src = "https://www.google.com/recaptcha/api.js?render=6LfApX0sAAAAAM_abp3VmTcR41aTJvj_uYmCLwFT";
-		script.async = true;
-		document.body.appendChild(script);
-	}, []);
   	return (
 		<>
 	    <div className="App">
