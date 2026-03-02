@@ -102,6 +102,9 @@ Test SSH connection using:
 ##### Version 1.1
 03 March 2026 11:41: reCaptch v3 operational for login and Sign-up buttons. See Documentation file named 'Deploy - Security from Denial Of Service.doc
 
+##### Version 1.2
+03 March 2026 12:06: Testing coded was added for production pilot testing. This fix removes it.
+
 ##APPENDIX 1.0##
 You’re absolutely right about the root cause: FastComet is serving your built React app, so pulling new code from GitHub won’t change anything until you run: 
 
