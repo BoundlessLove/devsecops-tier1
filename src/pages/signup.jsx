@@ -1,3 +1,5 @@
+//Uses Google Captcha like an API key
+
 import { useState } from "react";
 import axios from "axios";
 import { runRecaptcha } from "../utils/runRecaptcha";
@@ -26,9 +28,12 @@ function Signup() {
 	  setError("CAPTCHA verification failed. Try again.");
 	  return;
 	}
-
+	console.log("Email: "+email+", Code:"+ token);
     try {
-      await axios.post(`${process.env.REACT_APP_DEV_EMAIL_API_SERVER}/send-code`, { email });
+      await axios.post(`${process.env.REACT_APP_DEV_EMAIL_API_SERVER}/send-code`, 
+	  { email,
+		captchaToken: token
+	   });
       setStage("verify");
     } catch {
       setError("Could not send verification code");
