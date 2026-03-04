@@ -148,6 +148,7 @@ function App() {
 		}
 		try{
 			const token = await getAccessTokenSilently();
+			console.log(devServer+"/topsecret");
 			const response = await axios.get(devServer+"/topsecret", {
 				headers: {
 					"x-api-key": process.env.REACT_APP_API_KEY, 
@@ -277,6 +278,7 @@ function App() {
 		}
 		try{
 			const token = await getAccessTokenSilently();
+			console.log(` url: ${devServer}/users/${name}`);
 			const response = await axios.get(`${devServer}/users/${name}`, {
 				headers: {
 					"x-api-key": process.env.REACT_APP_API_KEY, 
@@ -356,16 +358,17 @@ function App() {
 				<div className="auth-box">
 				  <div className="auth-controls">
 				<li><p>1. Available to Guest: </p><p><button onClick={callApi}>Call API route</button></p></li>
-				<li><p>2. Purchase Option: </p><p><button onClick={callProtectedApi}>Purchase Quotes from Sanatana Dharma Oath book</button></p></li>
-				
+				{!isAuthenticated && (
+				<li><p>2. Purchase Option: </p><p><button onClick={callTopSecretApi}>Purchase Quotes from Sanatana Dharma Oath book</button></p></li>
+				)}
 				{isAuthenticated && hasApiAccess === false && (
 					<li>
-						<p><PurchaseButton /></p>
+						<p>Purchase Quotes from Sanatana Dharma Oath book: <PurchaseButton /></p>
 					</li>
 				)}
 				
 				
-				<li><p>3. To Comply with NZ Privacy Law: </p><p>For {email ?? "user"} <button onClick={callTopSecretApi}>View JWT Token</button></p></li>
+				<li><p>3. To Comply with NZ Privacy Law: </p><p>For {email ?? "user"} <button onClick={callProtectedApi}>View JWT Token</button></p></li>
 				<li>
 					<p>4. Connecting to Third Party database API: </p><p><input
 					type="text"

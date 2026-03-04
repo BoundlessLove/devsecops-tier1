@@ -174,6 +174,7 @@ app.get('/purchase', verifyJwt, async (req, res) => {
  */	
 
 app.get('/topsecret', verifyJwt, (req, res) => {
+	console.log("Topsecret route hit");
 	const permissions = req.auth?.permissions || [];
 	if (!permissions.includes("read:token")){
 		return res.status(403).json({ message: 'Token viewing Forbidden'});
