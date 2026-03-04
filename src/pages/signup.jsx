@@ -28,14 +28,21 @@ function Signup() {
 	  setError("CAPTCHA verification failed. Try again.");
 	  return;
 	}
-	console.log("Email: "+email+", Code:"+ token);
+	//console.log("Email: "+email+", Code:"+ token);
     try {
-      await axios.post(`${process.env.REACT_APP_DEV_EMAIL_API_SERVER}/send-code`, 
-	  { email,
-		captchaToken: token
-	   });
-      setStage("verify");
-    } catch {
+		await axios.post( 
+			`${process.env.REACT_APP_DEV_EMAIL_API_SERVER}/send-code`, 
+			{ email, 
+			  captchaToken: token 
+		    }, 
+			{ headers: { 
+			  "x-api-key": process.env.REACT_APP_API_KEY 
+		      } 
+			} 
+		); 
+		
+		setStage("verify");    
+	} catch {
       setError("Could not send verification code");
     }
   };
@@ -59,15 +66,14 @@ function Signup() {
 	  );
 	  return;
 	}
-
-
-
     try {
       await axios.post(`${process.env.REACT_APP_DEV_EMAIL_API_SERVER}/verify-signup`, {
         email,
         password,
         code
-      });
+      },
+	  { headers: { "x-api-key": process.env.REACT_APP_API_KEY } }
+	  );
 
       setError("Signup successful. Please log in.");
       setStage("done");
@@ -151,19 +157,23 @@ function Signup() {
       )}
 
 	  <div style={{ marginTop: "10px" }}>
-	    <button type="submit">
-	      {stage === "enter" ? "Send Verification Code" : "Complete Signup"}
-	    </button>
-
-	    {stage === "verify" && (
-	      <button
-	        type="button"
-	        onClick={cancelSignup}
-	        style={{ marginLeft: "10px", backgroundColor: "#ccc" }}
-	      >
-	        Cancel
-	      </button>
-	    )}
+		{stage !== "done" && (
+		  <>
+	  	    <button type="submit">
+		      {stage === "enter" ? "Send Verification Code" : "Complete Signup"}
+		    </button>
+	
+		    {stage === "verify" && (
+		      <button
+		        type="button"
+		        onClick={cancelSignup}
+		        style={{ marginLeft: "10px", backgroundColor: "#ccc" }}
+		      >
+		        Cancel
+		      </button>
+		    )}
+		  </>
+		)}
 	  </div>
     </form>
   );

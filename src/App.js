@@ -150,7 +150,8 @@ function App() {
 			const token = await getAccessTokenSilently();
 			const response = await axios.get(devServer+"/topsecret", {
 				headers: {
-					authorization: `Bearer ${token}`,
+					"x-api-key": process.env.REACT_APP_API_KEY, 
+					authorization: `Bearer ${token}`
 				},
 			});
 			//if (response.data) 
@@ -196,7 +197,8 @@ function App() {
 			const token = await getAccessTokenSilently();
 			const response = await axios.get(devServer+"/email", {
 				headers: {
-					authorization: `Bearer ${token}`,
+					"x-api-key": process.env.REACT_APP_API_KEY, 
+					authorization: `Bearer ${token}`
 				},
 			});
 			//console.log(response.data);
@@ -235,7 +237,8 @@ function App() {
 			const token = await getAccessTokenSilently();
 			const response = await axios.get(devServer+"/protected", {
 				headers: {
-					authorization: `Bearer ${token}`,
+					"x-api-key": process.env.REACT_APP_API_KEY, 
+					authorization: `Bearer ${token}`
 				},
 			});
 			//console.log(response.data);
@@ -276,7 +279,8 @@ function App() {
 			const token = await getAccessTokenSilently();
 			const response = await axios.get(`${devServer}/users/${name}`, {
 				headers: {
-					authorization: `Bearer ${token}`,
+					"x-api-key": process.env.REACT_APP_API_KEY, 
+					authorization: `Bearer ${token}`
 				},
 			});
 			setOutput(response.data);

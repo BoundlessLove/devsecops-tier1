@@ -108,6 +108,9 @@ Test SSH connection using:
 ##### Version 1.2
 03 March 2026 17:41: Server side checking of ReCaptcha implemented.
 
+##### Version 1.3
+04 March 2026 19:19: Updated Signup.js and app.js to include api-key headers. In localhost, now all apis working except User detail.
+
 ##APPENDIX 1.0##
 You’re absolutely right about the root cause: FastComet is serving your built React app, so pulling new code from GitHub won’t change anything until you run: 
 
