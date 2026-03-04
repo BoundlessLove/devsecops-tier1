@@ -26,7 +26,7 @@ function NavbarAuthControls() {
 	<nav className="navbar">
 		{isAuthenticated ? ( 	
 			<li>
-			<button onClick={() => logout({ returnTo: window.location.origin })}> 
+			<button onClick={() => logout({ returnTo: process.env.REACT_APP_LOGOUT_URL })}> 
 			  Logout 
 			</button> 
 				</li>	

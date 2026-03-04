@@ -343,7 +343,7 @@ function App() {
 			</div>
 			<div className="auth-box-main">
 				<img src={construction} alt="under construction" /> 
-				<p style={{ color: "red"}} ><b>AT THIS STAGE, ONLY GUEST LEVEL ACCESS IF FUNCTIONAL - 'Call API Route' button.</b></p>
+				<p style={{ color: "red"}} ><b>ALL OF THE WEBSITE IS FUNCTIONAL EXCEPT 'PURCHASE QUOTES' FUNCTIONALITY.</b></p>
 			</div>
 			<h3>User: {email ?? "Not Logged in"} </h3>
 			<div className="auth-wrapper">

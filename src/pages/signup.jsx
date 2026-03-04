@@ -89,7 +89,7 @@ function Signup() {
       } else if (auth0Code === "invalid_signup") {
         setError("The Email Address already has an account. Please log in instead.");
       } else {
-        setError("Something went wrong. Please try again.");
+        setError("Something went wrong. Check Passwords Match and please try again.");
       }
     }
   };

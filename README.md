@@ -114,6 +114,9 @@ Test SSH connection using:
 ##### Version 2.0
 04 March 2026 23:03: All endpoints operational in localhost.
 
+##### Version 2.1
+04 March 2026 23:44: All endpoints operational in Production. Purchase functionality to still be loaded.
+
 ##APPENDIX 1.0##
 You’re absolutely right about the root cause: FastComet is serving your built React app, so pulling new code from GitHub won’t change anything until you run: 
 
