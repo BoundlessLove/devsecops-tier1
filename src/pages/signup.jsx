@@ -79,7 +79,8 @@ function Signup() {
 
   const verifySignup = async (e) => {
     e.preventDefault();
-    setError("");
+	setError("");
+
 
     // 🔒 Passwords must match
     if (password !== confirmPassword) {
@@ -102,7 +103,10 @@ function Signup() {
         password,
         code
       },
-	  { headers: { "x-api-key": process.env.REACT_APP_API_KEY } }
+	  { headers: { 
+	    "x-api-key": process.env.REACT_APP_API_KEY 
+	    } 
+	  } 
 	  );
 
       setError("Signup successful. Please log in.");
@@ -156,10 +160,12 @@ function Signup() {
       {stage === "verify" && (
         <>
 	  	 <p style={{ fontSize: "0.9rem", color: "#555" }}>
-		  Password must be at between 8 and 20 characters long and include:
+
+		  <br />Password must be at between 8 and 20 characters long and include:
 		  <br />• one uppercase letter
 		  <br />• one number
 		  <br />• one special character
+		  <br /><br />Note: The code emailed to you will expire in five minutes.
 		 </p>
          <input
             type="password"
