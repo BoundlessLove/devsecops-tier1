@@ -62,6 +62,7 @@ ul {
 .header-wrapper { 
  position: relative; 
  text-align: center; 
+ height: 270px;
  margin: 40px 0; 
 } 
  

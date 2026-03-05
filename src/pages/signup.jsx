@@ -3,6 +3,8 @@
 import { useState } from "react";
 import axios from "axios";
 import { runRecaptcha } from "../utils/runRecaptcha";
+import { getCaptchaSessionToken } from "../utils/getCaptchaSessionToken";
+import { sendCodeRequestWithSession } from "../utils/sendCodeRequestWithSession";
 
 function Signup() {
   const [email, setEmail] = useState("");
@@ -46,6 +48,34 @@ function Signup() {
       setError("Could not send verification code");
     }
   };
+  
+  //generate captcha session token using recaptcha token, and then call SendCodeRequest funtion with it.
+  const sendCodeSession = async (e) => {
+    e.preventDefault();
+    setError("");
+
+  //console.log("Email: "+email+", Code:"+ token);
+    try {
+      // 1) Run reCAPTCHA v3
+      const captchaToken = await runRecaptcha("signup");
+	  if (!captchaToken) {
+	    setError("CAPTCHA verification failed. Try again.");
+	    return;
+	  }
+	  
+      // 2) Exchange captcha token for short-lived session token
+      const sessionToken = await getCaptchaSessionToken(captchaToken);
+
+      // 3) Use session token to call protected endpoint
+      const result = await sendCodeRequestWithSession(email, sessionToken);
+      console.log(result);
+
+      setStage("verify");
+    } catch (err) {
+      console.error(err);
+      setError("Failed to send verification code. Please try again.");
+    }
+  }
 
   const verifySignup = async (e) => {
     e.preventDefault();
@@ -106,7 +136,8 @@ function Signup() {
 
 
   return (
-    <form onSubmit={stage === "enter" ? sendCode : verifySignup}>
+//    <form onSubmit={stage === "enter" ? sendCode : verifySignup}>
+	  <form onSubmit={stage === "enter" ? sendCodeSession : verifySignup}>	
       <h2>Create Account</h2>
 
       {error && <p style={{ color: "red" }}>{error}</p>}

@@ -107,7 +107,7 @@ function App() {
 	      setError(error?.message || "Unknown error occurred.");
 	    });
 	}*/
-
+	
 	function callApi() { 
 	 
 	 axios.get(devServer, { 
@@ -319,10 +319,10 @@ function App() {
 	    <div className="App">
 		<div class="header-wrapper"> 
 		 <img src={dove} class="corner-img left-img" alt="" /> 
-		 <h1>Late Grandmother Kumari Raj Sarna's (1937-2023) last wish:</h1> <h1><u>Webstore: "May God Give Divine Intelligence to all"</u></h1>
 		 <img src={dove} class="corner-img right-img" alt="" /> 
 		</div>
 
+		<h1>Late Grandmother Kumari Raj Sarna's (1937-2023) last wish:</h1> <h1><u>Webstore: "May God Give Divine Intelligence to all"</u></h1>
 			<div>
 				<h2>i. Importance of God's word</h2>
 				<div className="auth-wrapper">

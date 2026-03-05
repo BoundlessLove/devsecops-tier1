@@ -117,6 +117,10 @@ Test SSH connection using:
 ##### Version 2.1
 04 March 2026 23:44: All endpoints operational in Production. Purchase functionality to still be loaded.
 
+##### Version 2.2
+06 March 2026 01:28: Modifications made so connection to email server for sending emails is using Google Recaptcha Access tokens.
+
+
 ##APPENDIX 1.0##
 You’re absolutely right about the root cause: FastComet is serving your built React app, so pulling new code from GitHub won’t change anything until you run: 
 
