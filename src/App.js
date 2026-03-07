@@ -436,11 +436,17 @@ function App() {
 			  }
 			/>
 		</Routes>
+		<h3>Acknowledgements</h3>
+		<p>Most of this webstore was build using help from Artificial Intelligence (AI) associated with Search Engines. It is fantastic. The Engineering profession has learnt to keep in synch with changing technology (Marsh, 2025, April 30). Nowadays, the improvements in AI have been seen in a negative way acrosss the globe (Trends Desk, 2026, Feb, 27).</p>
+		<p>As per INFOSYS FOUNDER Narayan Murthy (Forbes, 2026), if it is used as a tool, experience shows that it is not to be feared in anyway (@RepublicWorld, 2025, November, 17), and that includes GEN AI (Trends Desk, 2026, Feb, 27). My opinion is that everyone has to start somewhere, and unnecessary fear inhibits growth.</p>
 		<h3>References</h3>
 		<p>1.Bhalotia, A.(2026). Shri Hari Supremely Venerable Swamiji Shree Ramsukhdasji Maharaj | श्री हरि: परम श्रद्धये स्वामीजी श्री रामसुखदासजी महाराज . https://www.shriswamiramsukhdasjimaharaj.com/index.html. Last Accessed: 21 Feb 2026</p> 
 		<p>2. garten-gg.(2026). Pixabay- Bird, Dove, Cage image, Free for use. https://pixabay.com/photos/bird-dove-cage-symbol-peace-5563436/</p>
 		<p>3. Geeta Press Gorakhpur.(2023, Dec, 7). Facebook- Narayan Narayan Narayan Narayan. https://www.facebook.com/share/p/18AhMoXMPH/</p>
-		<p></p>
+		<p>4. @RepublicWorld.(2025, November, 17).Narayan Murthy on the Future of AI at Republic Legends.https://www.youtube.com/shorts/A53qyC4xf2Q</p>
+		<p>5. Trends Desk.(2026, Feb, 27). The Indian EXPRESS- JOURNALISM OF COURAGE- Narayana Murthy AI warning to young Indians worried about job losses: ‘All they need to do is…’- Narayana Murthy reflected on his own experiments with generative AI. https://indianexpress.com/article/trending/trending-in-india/narayana-murthy-ai-warning-young-indians-job-loss-10555029/. Last Accessed: 7 March 2026</p>
+		<p>6. Marsh, A. (2025, April 30). <i>Freddy the robot was the fall guy for British AI: Its creator lost a power struggle that led to an AI winter in the 1970s.</i> <b>IEEE Spectrum</b>, 62(5), Pg. 56</p>
+		<p>7. Forbes.(2026). Infosys.https://www.forbes.com/companies/infosys/. Last Accessed: 7 March 2026</p>
 		<p><b>© 2026 Jyotirmay Sarna. The content on this site is original. Do not copy, repost, or use without permission.</b></p>
 	</>
   );
