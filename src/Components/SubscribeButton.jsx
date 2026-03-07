@@ -17,11 +17,12 @@ export default function SubscribeButton({ product }) {
       console.log("Token:", accessToken);
 
       const res = await fetch(
-        `${process.env.REACT_APP_DEV_EMAIL_API_SERVER}/api/subscribe-daily-quotes`,
+        `${process.env.REACT_APP_DEV_SERVER}/api/subscribe-daily-quotes`,
         {
           method: "POST",
           headers: {
             Authorization: `Bearer ${accessToken}`,
+			"x-api-key": process.env.REACT_APP_API_KEY, 
             "Content-Type": "application/json",
           },
           body: JSON.stringify({ priceId: product.priceId }),

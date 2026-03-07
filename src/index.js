@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Auth0Provider } from '@auth0/auth0-react'
 import { BrowserRouter } from 'react-router-dom';
-
+const audience= `${process.env.REACT_APP_DEV_AUTH0_AUDIENCE}`;
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -14,7 +14,7 @@ root.render(
 		clientId={process.env.REACT_APP_DEV_AUTH0_CLIENT_ID}
 		authorizationParams={{
 			redirect_uri: window.location.origin,
-			audience: "this is a unique identifier",
+			audience: audience,
 			scope: "offline_access"
 		}}
 	>

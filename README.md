@@ -120,6 +120,9 @@ Test SSH connection using:
 ##### Version 2.2
 06 March 2026 01:28: Modifications made so connection to email server for sending emails is using Google Recaptcha Access tokens.
 
+##### Version 2.3
+07 March 2026 Saturday 11:11: Subscribe button appearing now on SPM. Code for "purchase subscription with Stripe and Auth0" is in webstore/demo and apiserver/items4sale-api (See its Readme version 1.6) projects. Troubleshooting now.  
+
 
 ##APPENDIX 1.0##
 You’re absolutely right about the root cause: FastComet is serving your built React app, so pulling new code from GitHub won’t change anything until you run: 
