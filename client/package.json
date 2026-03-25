@@ -13,7 +13,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-	"test": "CI=true react-app-rewired test --watchAll=false",
+	"test": "CI=true react-app-rewired test --watchAll=false --runInBand --all",
     "test:dev": "react-app-rewired test --watchAll",
     "test:ci": "react-scripts test --watchAll=false __tests__/App.test.js --verbose --coverage",
     "lint": "eslint src --ext .js,.jsx",
