@@ -54,7 +54,9 @@ jobs:
 
       - name: Start backend
         working-directory: server
-        run: npm start &
+        run: |
+          npm start &
+          echo $! > backend.pid
 
       - name: Wait for backend health
         run: npx wait-on http://localhost:5000/api/hello
@@ -66,11 +68,16 @@ jobs:
       - name: Run frontend tests
         run: npm test
 
+      # Stop backend cleanly
       - name: Stop backend
+        working-directory: server
         run: |
-         echo "Stopping backend..."
-         pkill node || true
-
+          if [ -f backend.pid ]; then
+            kill $(cat backend.pid)
+            echo "Backend stopped"
+          else
+            echo "No backend PID file found"
+          fi
 
       - name: Build frontend
         run: npm run build
