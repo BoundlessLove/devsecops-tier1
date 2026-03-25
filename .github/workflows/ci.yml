@@ -66,11 +66,12 @@ jobs:
       - name: Run frontend tests
         run: npm test
 
+      - name: Stop backend
+        run: kill $(lsof -t -i:5000) || true
+
       - name: Build frontend
         run: npm run build
 
-      - name: Stop backend
-        run: kill $(lsof -t -i:5000) || true
 
       - name: Upload client test report
         uses: actions/upload-artifact@v4
