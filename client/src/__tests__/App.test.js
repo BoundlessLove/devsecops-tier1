@@ -1,54 +1,52 @@
-/*import { render, screen } from '@testing-library/react';
-import App from './App';
-
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
-*/
-
-
-
+// src/App.test.js
+// src/__tests__/App.test.js
 import { render, screen } from "@testing-library/react";
 import App from "../App.js";
 
-// 1. Mock environment variables BEFORE importing App
-jest.mock('./App', () => {
+beforeAll(() => {
+  // Force Jest to use your local backend during tests
   process.env.REACT_APP_API_URL = "http://localhost:5000";
-  return jest.requireActual('./App');
+
+  // Ensure fetch is real (Jest 28+ uses undici)
+  // No need to import node-fetch
 });
 
+afterEach(() => {
+  jest.restoreAllMocks();
+});
 
+test("shows backend message or error", async () => {
+  render(<App />);
+  //if you want to force error:
+  //jest.spyOn(global, "fetch").mockRejectedValue(new Error("Server offline"));
 
+  const element = await screen.findByText(
+    /Hello from Node\.js backend!|error/i,
+    {},
+    { timeout: 3000 }
+  );
 
-
-// Mock the API call
-global.fetch = jest.fn(() =>
-  Promise.resolve({
-    json: () => Promise.resolve({ message: "Hello from Node.js backend!" }),
-  })
-);
-
-
-/*
-//React components are evaluated as soon as they are imported.
-// By moving the env setup above the import, - process.env.REACT_APP_API_URL is defined, URL valid,
-// mock fetch intercepts the call and the test is evaluated
-
-beforeAll(() => {
-// Set the environment variable for the test, 
-//as they are only injected at build time (i.e. not available for NPM test)
-if (process.env.NODE_ENV === "development") {
-  process.env.REACT_APP_API_URL = "http://localhost:5000";
-} else {
-  process.env.REACT_APP_API_URL = "http://mock-url-for-tests";
-}
-});*/
+  expect(element).toBeInTheDocument();
+});
 
 
 test("renders backend message", async () => {
   render(<App />);
-  const element = await screen.findByText("Hello from Node.js backend!");
-  expect(element).toBeInTheDocument();
+
+  // This will fail if the backend is down
+  await expect(
+    screen.findByText("Hello from Node.js backend!", {}, { timeout: 3000 })
+  ).resolves.toBeTruthy();
 });
+
+
+/*
+test("shows error when backend is down", async () => {
+  jest.spyOn(global, "fetch").mockRejectedValue(new Error("Server offline"));
+
+  render(<App />);
+
+  const error = await screen.findByText(/error/i);
+  expect(error).toBeInTheDocument();
+});
+*/

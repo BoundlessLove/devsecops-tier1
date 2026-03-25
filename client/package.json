@@ -13,9 +13,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-	"test": "react-scripts test --watchAll=false --coverage",
-	"test:dev": "react-scripts test --watchAll=false __tests__/App.dev.test.js --coverage",
-	"test:ci": "react-scripts test --watchAll=false __tests__/App.test.js --coverage",
+	"test": "react-app-rewired test --watchAll",
+    "test:dev": "react-scripts test --watchAll=false __tests__/App.dev.test.js --verbose --coverage",
+    "test:ci": "react-scripts test --watchAll=false __tests__/App.test.js --verbose --coverage",
     "lint": "eslint src --ext .js,.jsx",
     "eject": "react-scripts eject"
   },
@@ -39,6 +39,8 @@
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.9.1",
-    "@testing-library/react": "^16.3.2"
+    "@testing-library/react": "^16.3.2",
+    "jest-html-reporter": "^4.3.0",
+    "react-app-rewired": "^2.2.1"
   }
 }
