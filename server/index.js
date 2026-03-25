@@ -3,8 +3,8 @@ const app = express();
 const cors = require("cors");
 
 const allowedOrigins = [
-	"http://localhost:3000"//,
-	//"http://localhost"	
+	"http://localhost:3000",
+	"http://localhost"	
 ];
 
 app.use(cors({
