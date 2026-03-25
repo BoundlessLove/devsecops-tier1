@@ -67,7 +67,10 @@ jobs:
         run: npm test
 
       - name: Stop backend
-        run: kill $(lsof -t -i:5000) || true
+        run: |
+         echo "Stopping backend..."
+         pkill node || true
+
 
       - name: Build frontend
         run: npm run build
