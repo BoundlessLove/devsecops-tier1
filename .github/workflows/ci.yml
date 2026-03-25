@@ -42,14 +42,14 @@ jobs:
 
       # Install and start backend
       - name: Install backend
-        working-directory: backend
+        working-directory: server
         run: npm ci
 
       - name: Start backend
-        working-directory: backend
+        working-directory: server
         run: npm start &
 
-      - name: Wait for backend
+      - name: Wait for backend health
         run: npx wait-on http://localhost:5000/api/hello
 
       # Now run frontend tests
