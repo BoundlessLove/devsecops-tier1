@@ -58,6 +58,7 @@ jobs:
 
       # 🔐 Fetch secrets from Key Vault
       - name: Fetch secrets from Azure Key Vault
+        id: keyvault
         uses: azure/get-keyvault-secrets@v1
         with:
           keyvault: ${{ secrets.AZURE_KEYVAULT_NAME }}
@@ -65,8 +66,14 @@ jobs:
             apikey
 
       # 🔧 Pass secret to React client
-      - name: Set client env
-        run: echo "REACT_APP_API_KEY=${{ env.APIKEY }}" >> $GITHUB_ENV
+      - name: Set client env by exporting API KEY
+        run:  echo "APIKEY=${{ steps.keyvault.outputs.apikey }}" >> $GITHUB_ENV
+
+      - name: Debug APIKEY
+        run: |
+          echo "APIKEY raw: '${{ steps.keyvault.outputs.apikey }}'"
+          echo "APIKEY is: '${{ env.APIKEY }}'"
+
 
       # Install and start backend with secret
       - name: Install backend
@@ -97,7 +104,9 @@ jobs:
       # Debug (optional but VERY helpful)
       - name: Show .env.test
         working-directory: client
-        run: cat .env.test
+        run: |
+          cat .env.test
+
 
       # run tests
       - name: Run client tests
