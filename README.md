@@ -13,3 +13,5 @@ Basics of Entry into Test Automation using react and node.js
 
 ##### Version 0.2 
 26 March 2026: Tests working in dev for client and server. ci.yaml operational. Report working nicely. 
+
+© 2026 Jyotirmay Sarna. This work is original. Do not copy, repost, or use without permission
