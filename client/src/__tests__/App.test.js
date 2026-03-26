@@ -7,8 +7,13 @@ beforeAll(() => {
   // Force Jest to use your local backend during tests
   process.env.REACT_APP_API_URL = "http://localhost:5000";
 
-  // Ensure fetch is real (Jest 28+ uses undici)
-  // No need to import node-fetch
+    // API key comes from:
+    // - .env.local (local)
+    // - GitHub Actions Key Vault step (CI)
+    if (!process.env.REACT_APP_API_KEY) {
+      throw new Error("REACT_APP_API_KEY is missing in test environment");
+    }
+
 });
 
 afterEach(() => {
