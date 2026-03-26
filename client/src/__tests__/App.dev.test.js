@@ -4,7 +4,7 @@ import App from "../App.js";
 
 beforeAll(() => {
   // Switch based on NODE_ENV if you want
-  if (process.env.NODE_ENV === "development") {
+  if (process.env.NODE_ENV === "test") {
     process.env.REACT_APP_API_URL = "http://localhost:5000";
   } else {
     process.env.REACT_APP_API_URL = "https://prod-url.example.com";
