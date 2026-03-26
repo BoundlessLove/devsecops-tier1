@@ -28,3 +28,9 @@ server: npm start
 
 #### Version 1.0
 26 March 2026: Tests working in dev for client and server. ci.yaml  tested. Report working for standard and API endpoint. Azure Keyvault used to get API KEY at runtime. 
+
+#### Version 1.1
+26 March 2026: fixed issue with API_Key variable not being read. It was just that it refers to .env.test and it took me time to understand that.
+
+#### Version 1.2
+Fix the ci-keyvault.yml by giving secret retrieval step an id, and using it to refer to the secret. Also, update the ci-keyvault.yml's 'injecting API key into test environment' step to overwrite the REACT_APP_API_KEY variable, rather than append.
