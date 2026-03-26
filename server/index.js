@@ -8,7 +8,7 @@ const cors = require("cors");
 function requireApiKey(req, res, next) {
   const clientKey = req.headers["x-api-key"];
   const serverKey = process.env.API_KEY_PROD;
-  //const serverKey = process.env.API_KEY_LOCAL;
+ // const serverKey = process.env.API_KEY_LOCAL;
   //console.log(`Server key: ${serverKey}`);
 
   if (!clientKey || clientKey !== serverKey) {

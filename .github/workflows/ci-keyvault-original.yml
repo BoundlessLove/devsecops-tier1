@@ -84,24 +84,10 @@ jobs:
 
       # Run frontend tests
       - name: Install frontend
-        working-directory: client
         run: npm ci
 
-      # Inject test env vars  		
-      - name: Inject API key into test environment
-        working-directory: client
-        run: |
-          echo "REACT_APP_API_KEY=${{ env.APIKEY }}" >> .env.test
-          echo "REACT_APP_API_URL=http://localhost:5000" >> .env.test
-
-      - name: Debug env file
-        working-directory: client
-        run: cat .env.test
-
-      - name: Run client tests
-        working-directory: client
-        run: |
-          CI=true npm test -- --watchAll=false --runInBand
+      - name: Run frontend tests
+        run: npm test
 
       # Stop backend
       - name: Stop backend
