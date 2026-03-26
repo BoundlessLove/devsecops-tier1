@@ -2,9 +2,9 @@ name: CI – React + Node
 
 on:
   push:
-    branches: [main]
+    branches: [dev]
   pull_request:
-    branches: [main]
+    branches: [dev]
 
 jobs:
   backend:
@@ -32,7 +32,6 @@ jobs:
           name: test-report-server
           path: server/test-report.html
 
-  
   frontend:
     runs-on: ubuntu-latest
     needs: backend
@@ -47,7 +46,27 @@ jobs:
         with:
           node-version: 20
 
-      # Install and start backend
+      # 🔐 Login to Azure
+      - name: Azure Login
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          client-secret: ${{ secrets.AZURE_CLIENT_SECRET }}
+
+      # 🔐 Fetch secrets from Key Vault
+      - name: Fetch secrets from Azure Key Vault
+        uses: azure/get-keyvault-secrets@v1
+        with:
+          keyvault: ${{ secrets.AZURE_KEYVAULT_NAME }}
+          secrets: |
+            apikey
+
+      # 🔧 Pass secret to React client
+      - name: Set client env
+        run: echo "REACT_APP_API_KEY=${{ env.APIKEY }}" >> $GITHUB_ENV
+
+      # Install and start backend with secret
       - name: Install backend
         working-directory: server
         run: npm ci
@@ -55,37 +74,24 @@ jobs:
       - name: Start backend
         working-directory: server
         run: |
-          npm start &
+          API_KEY="${{ env.APIKEY }}" npm start &
           echo $! > backend.pid
 
-      - name: Wait for backend health
+      - name: Wait for backend
         run: npx wait-on http://localhost:5000/api/hello
 
-      # Now run frontend tests
+      # Run frontend tests
       - name: Install frontend
         run: npm ci
 
       - name: Run frontend tests
         run: npm test
 
-      # Stop backend cleanly
+      # Stop backend
       - name: Stop backend
         working-directory: server
         run: |
-          if [ -f backend.pid ]; then
-            kill $(cat backend.pid)
-            echo "Backend stopped"
-          else
-            echo "No backend PID file found"
-          fi
+          kill $(cat backend.pid) || true
 
       - name: Build frontend
         run: npm run build
-
-
-      - name: Upload client test report
-        uses: actions/upload-artifact@v4
-        with:
-          name: test-report-client
-          path: client/test-report.html
-
