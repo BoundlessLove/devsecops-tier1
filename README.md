@@ -1,3 +1,5 @@
+$${\color{red} © \space 2026 \space Jyotirmay \space Sarna. \space This \space work \space is \space original. \space Do \space not \space copy, \space repost, \space or \space use \space without \space permission. }$$
+
 # Versions
 
 ## Purpose of code ##
@@ -38,4 +40,4 @@ Fix the ci-keyvault.yml by giving secret retrieval step an id, and using it to r
 ## NEXT STEPS ##
 Implement Concordian for Test Driven Developoment (TDD).
 
-© 2026 Jyotirmay Sarna. This work is original. Do not copy, repost, or use without permission
+$${\color{red} © \space 2026 \space Jyotirmay \space Sarna. \space This \space work \space is \space original. \space Do \space not \space copy, \space repost, \space or \space use \space without \space permission. }$$
