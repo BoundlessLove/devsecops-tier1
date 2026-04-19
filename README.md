@@ -3,7 +3,7 @@
 ## Purpose of code ##
 Basics of Entry into Test Automation using react and node.js
 
-Right now the client and server are optimised to run for DevSecOps. To run client and server locally, do the following:
+Right now the client and server are optimised to run for DevSecOps and Test Driven Developoment (TDD). To run client and server locally, do the following:
 
 1. Change the server/index.js to take the API key from dev variable:
 - const serverKey = process.env.API_KEY_LOCAL;
@@ -35,6 +35,7 @@ server: npm start
 #### Version 1.2
 Fix the ci-keyvault.yml by giving secret retrieval step an id, and using it to refer to the secret. Also, update the ci-keyvault.yml's 'injecting API key into test environment' step to overwrite the REACT_APP_API_KEY variable, rather than append.
 
-
+## NEXT STEPS ##
+Implement Concordian for Test Driven Developoment (TDD).
 
 © 2026 Jyotirmay Sarna. This work is original. Do not copy, repost, or use without permission
